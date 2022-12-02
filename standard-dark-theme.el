@@ -41,10 +41,7 @@
   (require 'standard-themes)
 
   (deftheme standard-dark
-    "Like the unthemed dark Emacs, but more consistent."
-    :background-mode 'dark
-    :kind 'color-scheme
-    :family 'standard)
+    "Like the unthemed dark Emacs, but more consistent.")
 
   (defconst standard-dark-palette
     '(;; Basic tones
@@ -220,5 +217,8 @@
   (standard-themes-theme standard-dark standard-dark-palette)
 
   (provide-theme 'standard-dark))
+
+;;;###theme-autoload
+(put 'standard-dark 'theme-properties '(:background-mode dark :kind color-scheme :family standard))
 
 ;;; standard-dark-theme.el ends here

@@ -6,7 +6,7 @@
 ;; Maintainer: Standard-Themes Development <~protesilaos/standard-themes@lists.sr.ht>
 ;; URL: https://git.sr.ht/~protesilaos/standard-themes
 ;; Mailing-List: https://lists.sr.ht/~protesilaos/standard-themes
-;; Version: 1.0.1
+;; Version: 1.0.2
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: faces, theme, accessibility
 
@@ -85,7 +85,6 @@ This affects comments, doc strings, and some other minor elements."
   '(set :tag "Properties" :greedy t
         (const :tag "Proportionately spaced font (variable-pitch)" variable-pitch)
         (choice :tag "Font weight (must be supported by the typeface)"
-                (const :tag "Bold (default)" nil)
                 (const :tag "Thin" thin)
                 (const :tag "Ultra-light" ultralight)
                 (const :tag "Extra-light" extralight)
@@ -94,6 +93,7 @@ This affects comments, doc strings, and some other minor elements."
                 (const :tag "Regular" regular)
                 (const :tag "Medium" medium)
                 (const :tag "Semi-bold" semibold)
+                (const :tag "Bold" bold)
                 (const :tag "Extra-bold" extrabold)
                 (const :tag "Ultra-bold" ultrabold))
         (radio :tag "Height"
@@ -779,7 +779,7 @@ Helper function for `standard-themes-preview-colors'."
     `(child-frame-border ((,c :background ,border)))
     `(comint-highlight-input ((,c :inherit bold)))
     `(comint-highlight-prompt ((,c :inherit minibuffer-prompt)))
-    `(edmacro-label ((,c :inherit bold)))
+    `(edmacro-label ((,c :inherit bold :foreground ,accent-0)))
     `(elisp-shorthand-font-lock-face ((,c :inherit italic)))
     `(error ((,c :inherit bold :foreground ,err)))
     `(escape-glyph ((,c :foreground ,warning)))
@@ -904,8 +904,8 @@ Helper function for `standard-themes-preview-colors'."
 ;;;; calendar and diary
     `(calendar-month-header ((,c :inherit bold)))
     `(calendar-today ((,c :inherit bold :underline t)))
-    `(calendar-weekday-header ((,c :foreground ,fg-alt)))
-    `(calendar-weekend-header ((,c :inherit calendar-weekday-header)))
+    `(calendar-weekday-header ((,c :foreground ,date)))
+    `(calendar-weekend-header ((,c :foreground ,err)))
     `(diary ((,c :background ,bg-dim :foreground ,accent-0)))
     `(diary-anniversary ((,c :foreground ,accent-1)))
     `(diary-time ((,c :foreground ,date)))
@@ -1354,11 +1354,10 @@ Helper function for `standard-themes-preview-colors'."
     `(magit-bisect-skip ((,c :inherit warning)))
     `(magit-blame-date (( )))
     `(magit-blame-dimmed ((,c :inherit shadow)))
-    `(magit-blame-hash ((,c :inherit shadow)))
-    `(magit-blame-heading ((,c :background ,bg-dim :extend t)))
+    `(magit-blame-hash (( )))
     `(magit-blame-highlight ((,c :background ,bg-active :foreground ,fg-main)))
     `(magit-blame-name (( )))
-    `(magit-blame-summary (( )))
+    `(magit-blame-summary ((  )))
     `(magit-branch-local ((,c :foreground ,accent-0)))
     `(magit-branch-remote ((,c :foreground ,accent-1)))
     `(magit-branch-upstream ((,c :inherit italic)))
