@@ -1113,6 +1113,7 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(consult-key ((,c :inherit standard-themes-key-binding)))
     `(consult-imenu-prefix ((,c :inherit shadow)))
     `(consult-line-number ((,c :inherit shadow)))
+    `(consult-preview-cursor ((,c :background ,cursor :foreground ,bg-main)))
     `(consult-separator ((,c :foreground ,border)))
 ;;;; corfu
     `(corfu-current ((,c :background ,bg-completion)))
@@ -1474,6 +1475,8 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(lazy-highlight ((,c :background ,bg-cyan :foreground ,fg-main)))
     `(match ((,c :background ,bg-warning)))
     `(query-replace ((,c :background ,bg-red :foreground ,fg-main)))
+;;;; jit-spell
+    `(jit-spell-misspelling ((,c :inherit standard-themes-underline-error)))
 ;;;; keycast
     `(keycast-command ((,c :inherit bold :foreground ,bg-accent)))
     `(keycast-key ((,c :background ,bg-accent :foreground ,bg-main)))
