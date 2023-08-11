@@ -20,7 +20,7 @@
 #+texinfo: @insertcopying
 
 This manual, written by Protesilaos Stavrou, describes the Emacs package
-called =standard-themes=, and provides every other piece of information
+called ~standard-themes~, and provides every other piece of information
 pertinent to it.
 
 The documentation furnished herein corresponds to stable version
@@ -30,8 +30,10 @@ commit, is explicitly marked as such.
 
 Current development target is {{{development-version}}}.
 
-+ Package name (GNU ELPA): =standard-themes=
++ Package name (GNU ELPA): ~standard-themes~
 + Official manual: <https://protesilaos.com/emacs/standard-themes>
++ Change log: <https://protesilaos.com/emacs/standard-themes-changelog>
++ Sample pictures: <https://protesilaos.com/emacs/standard-themes-pictures>
 + Git repo on SourceHut: <https://git.sr.ht/~protesilaos/standard-themes>
   - Mirrors:
     + GitHub: <https://github.com/protesilaos/standard-themes>
@@ -86,7 +88,7 @@ consistency, customizability, and extensibility.
 :CUSTOM_ID: h:cb6ae4d6-76a1-4bc3-90af-aafcaa05dc35
 :END:
 
-The package is available as =standard-themes=.  Simply do:
+The package is available as ~standard-themes~.  Simply do:
 
 : M-x package-refresh-contents
 : M-x package-install
@@ -181,7 +183,7 @@ Everything is in place to set up the package.
 :CUSTOM_ID: h:c3975e07-8bbb-42b2-a160-27e3afeb3258
 :END:
 
-The =standard-themes= provide user options which tweak secondary
+The ~standard-themes~ provide user options which tweak secondary
 aspects of the theme.  All customizations need to be evaluated before
 loading a theme.  Any change after the theme has been loaded require a
 re-load ([[#h:59c399d6-5dca-4686-b793-255be8bffc31][Loading a theme]]).
@@ -238,7 +240,7 @@ activation of the built-in ~variable-pitch-mode~.
 
 To get consistent typography, the user may need to edit the font
 family of the ~fixed-pitch~ and ~variable-pitch~ faces.  The
-=fontaine= package on GNU ELPA (by Protesilaos) can be helpful in this
+~fontaine~ package on GNU ELPA (by Protesilaos) can be helpful in this
 regard.
 
 ** Accented mode line
@@ -273,7 +275,7 @@ In this context, the UI elements are:
 
 To get consistent typography, the user may need to edit the font
 family of the ~fixed-pitch~ and ~variable-pitch~ faces.  The
-=fontaine= package on GNU ELPA (by Protesilaos) can be helpful in this
+~fontaine~ package on GNU ELPA (by Protesilaos) can be helpful in this
 regard.
 
 ** Bold constructs
@@ -444,7 +446,7 @@ face's height.
 
 - A ~variable-pitch~ property changes the font family of the heading
   to that of the ~variable-pitch~ face (normally a proportionately
-  spaced typeface).  Also check the =fontaine= package (by
+  spaced typeface).  Also check the ~fontaine~ package (by
   Protesilaos) for tweaking fonts via faces.
 
 - The symbol of a weight attribute adjusts the font of the heading
@@ -616,7 +618,7 @@ Contact me if you need further help with this.
 Emacs can load and maintain enabled multiple themes at once.  This
 typically leads to awkward styling and weird combinations.  The theme
 looks broken and the designer's intent is misunderstood.  Before
-loading either of the =standard-themes=, the user is encouraged to
+loading either of the ~standard-themes~, the user is encouraged to
 disable all others ([[#h:bc4827ec-7ec1-4511-ae1b-491c28835b19][Disable other themes]]):
 
 #+begin_src emacs-lisp
@@ -899,7 +901,7 @@ manual, especially the sections on enabling and loading the themes,
 will be in a good position to benefit from that hook.
 
 Advanced users who have a need to switch between the Standard themes
-and other items (e.g. the =modus-themes= and =ef-themes=) will find
+and other items (e.g. the ~modus-themes~ and ~ef-themes~) will find
 that such a hook does not meet their requirements: it only works with
 the Standard themes and only with the functions they provide.
 
@@ -1032,15 +1034,15 @@ To reset the font family, one can use this:
 (set-face-attribute 'italic nil :family 'unspecified)
 #+end_src
 
-Consider the =fontaine= package on GNU ELPA (by Protesilaos) which
+Consider the ~fontaine~ package on GNU ELPA (by Protesilaos) which
 provides the means to configure font families via faces.
 
-** Tweak =org-modern= timestamps
+** Tweak ~org-modern~ timestamps
 :PROPERTIES:
 :CUSTOM_ID: h:8c88f697-a14e-468d-935c-7576934e7092
 :END:
 
-The =org-modern= package uses faces and text properties to make Org
+The ~org-modern~ package uses faces and text properties to make Org
 buffers more aesthetically pleasing.  It affects tables, timestamps,
 lists, headings, and more.
 
@@ -1050,7 +1052,7 @@ prevented the user option ~org-modern-label-border~ from having its
 desired effect.  As such, we no longer override that face.
 
 Users who were used to the previous design and who generally do not
-configure the user options of =org-modern= may thus notice a change in
+configure the user options of ~org-modern~ may thus notice a change in
 how clocktables (or generally tables with timestamps) are aligned.  The
 simplest solution is to instruct the mode to not prettify timestamps, by
 setting the user option ~org-modern-timestamp~ to ~nil~.  For example, by
@@ -1073,7 +1075,7 @@ For any further issues, you are welcome to ask for help.
 
 The built-in ~goto-address-mode~ uses heuristics to identify URLs and
 email addresses in the current buffer.  It then applies a face to them
-to change their style.  Some packages, such as =notmuch=, use this
+to change their style.  Some packages, such as ~notmuch~, use this
 minor-mode automatically.
 
 The faces are not declared with ~defface~, meaning that it is better
@@ -1136,7 +1138,7 @@ All the faces defined by the themes:
 :CUSTOM_ID: h:f954364c-bc23-4230-b8ac-d8804bdbabd9
 :END:
 
-The =standard-themes= will only ever support a curated list of packages based
+The ~standard-themes~ will only ever support a curated list of packages based
 on my judgement ([[#h:52524f5a-633e-4e07-917d-06c6e663ec3f][Packages that are hard to support]]).  Nevertheless, the
 list of explicitly or implicitly supported packages already covers
 everything most users need.
@@ -1280,7 +1282,7 @@ intervene ([[#h:9b2458f1-6f70-4f45-849d-f10782c9f18f][Explicitly supported packa
 :END:
 
 These are difficult to support due to their (i) incompatibility with the
-design of the =standard-themes=, (ii) complexity or multiple points of entry,
+design of the ~standard-themes~, (ii) complexity or multiple points of entry,
 (iii) external dependencies, (iv) existence of better alternatives in my
 opinion, or (v) inconsiderate use of color out-of-the-box and implicit
 unwillingness to be good Emacs citizens:
@@ -1291,7 +1293,7 @@ unwillingness to be good Emacs citizens:
 - calibredb :: has an external dependency that I don't use.
 
 - ctrlf :: use the built-in isearch or the ~consult-line~ command of
-  =consult=.
+  ~consult~.
 
 - dired+ :: it is complex and makes inconsiderate use of color.
 
@@ -1300,11 +1302,11 @@ unwillingness to be good Emacs citizens:
 - ement.el :: has an external dependency that I don't use.
 
 - helm :: it is complex and makes inconsiderate use of color.  Prefer
-  the =vertico=, =consult=, and =embark= packages.
+  the ~vertico~, ~consult~, and ~embark~ packages.
 
 - info+ :: it is complex and makes inconsiderate use of color.
 
-- ivy/counsel/swiper :: use the =vertico=, =consult=, and =embark=
+- ivy/counsel/swiper :: use the ~vertico~, ~consult~, and ~embark~
   packages which are designed to be compatible with standard Emacs
   mechanisms and are modular.
 
