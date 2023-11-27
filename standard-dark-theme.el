@@ -85,13 +85,28 @@
       (cyan-cooler     "#7fffd4")
       (cyan-faint      "#6acbcb")
 
-      ;; Basic hues for background values
-      (bg-red      "#cd2f30")
-      (bg-green    "#408420")
-      (bg-yellow   "#8f5040")
-      (bg-blue     "#4648d0")
-      (bg-magenta  "#a050cf")
-      (bg-cyan     "#2270be")
+;;; Common accent backgrounds
+
+      (bg-red-intense     "#9d1f1f")
+      (bg-green-intense   "#2f822f")
+      (bg-yellow-intense  "#7a6100")
+      (bg-blue-intense    "#1640b0")
+      (bg-magenta-intense "#7030af")
+      (bg-cyan-intense    "#2266ae")
+
+      (bg-red-subtle      "#620f2a")
+      (bg-green-subtle    "#00422a")
+      (bg-yellow-subtle   "#4a4000")
+      (bg-blue-subtle     "#242679")
+      (bg-magenta-subtle  "#552f5f")
+      (bg-cyan-subtle     "#004065")
+
+      (bg-red-nuanced     "#2c0614")
+      (bg-green-nuanced   "#001904")
+      (bg-yellow-nuanced  "#221000")
+      (bg-blue-nuanced    "#0f0e39")
+      (bg-magenta-nuanced "#230631")
+      (bg-cyan-nuanced    "#041529")
 
       ;; Diffs
       (bg-added          "#00331f")
@@ -129,13 +144,14 @@
       (cyan-graph-1-bg    "#00808f")
 
       ;; Special hues
-      (bg-mode-line  "#505050") (bg-mode-line-inactive "#323232")
+      (bg-fringe     bg-dim)
       (bg-accent     "#ffc200")
       (bg-completion "#254b5f")
       (bg-hover      "#457b2f")
       (bg-hover-alt  "#00688b")
       (bg-hl-line    "#334815")
       (bg-region     "#0000cd")
+      (fg-region     unspecified)
       (bg-paren      "#4f94cd")
       (bg-err        "#3f0d09") ; check with err
       (bg-warning    "#362f00") ; check with warning
@@ -143,6 +159,13 @@
 
       (border        "#606070")
       (cursor        "#ffffff")
+
+      (bg-mode-line-active        "#505050")
+      (fg-mode-line-active        "#ffffff")
+      (border-mode-line-active    "#959595")
+      (bg-mode-line-inactive      "#323232")
+      (fg-mode-line-inactive      "#969696")
+      (border-mode-line-inactive  "#606060")
 
       (bg-tab              "#333333")
       (bg-tab-inactive     "#4d4d4d")
@@ -156,24 +179,25 @@
       (underline-warning "#c0b000")
       (underline-info    "#22b022")
 
-      ;; Conditional hues
-      (bg-prompt           "#483f73")
-      (bg-region-intense   "#9f3047")
-      (bg-mode-line-accent "#173780")
-
       ;; Mappings
       (err red)
       (warning yellow-warmer)
       (info green)
 
-      (link cyan)
-      (link-alt magenta-cooler)
-      (link-faint cyan-faint)
-      (link-alt-faint magenta-faint)
-      (date cyan-warmer)
+      (date-common cyan-warmer)
+      (date-deadline red)
+      (date-event fg-alt)
+      (date-holiday red-cooler)
+      (date-now fg-main)
+      (date-range fg-alt)
+      (date-scheduled green-cooler)
+      (date-weekday cyan-warmer)
+      (date-weekend red)
+
       (name cyan-cooler)
       (keybind blue-cooler)
-      (prompt blue)
+      (bg-prompt unspecified)
+      (fg-prompt blue)
 
       (builtin blue-faint)
       (comment red-warmer)
@@ -193,6 +217,14 @@
       (accent-1 red-cooler)
       (accent-2 green)
       (accent-3 magenta-cooler)
+
+      (fg-link cyan)
+      (bg-link unspecified)
+      (underline-link blue-warmer)
+
+      (fg-link-visited magenta-cooler)
+      (bg-link-visited unspecified)
+      (underline-link-visited magenta)
 
       (mail-0 red-cooler)
       (mail-1 magenta-warmer)
@@ -215,7 +247,39 @@
 
       (prose-code cyan-cooler)
       (prose-macro green-warmer)
-      (prose-verbatim magenta-warmer))
+      (prose-verbatim magenta-warmer)
+
+;;;; Heading mappings
+
+      (fg-heading-0 rainbow-0)
+      (fg-heading-1 rainbow-1)
+      (fg-heading-2 rainbow-2)
+      (fg-heading-3 rainbow-3)
+      (fg-heading-4 rainbow-4)
+      (fg-heading-5 rainbow-5)
+      (fg-heading-6 rainbow-6)
+      (fg-heading-7 rainbow-7)
+      (fg-heading-8 rainbow-8)
+
+      (bg-heading-0 unspecified)
+      (bg-heading-1 unspecified)
+      (bg-heading-2 unspecified)
+      (bg-heading-3 unspecified)
+      (bg-heading-4 unspecified)
+      (bg-heading-5 unspecified)
+      (bg-heading-6 unspecified)
+      (bg-heading-7 unspecified)
+      (bg-heading-8 unspecified)
+
+      (overline-heading-0 unspecified)
+      (overline-heading-1 unspecified)
+      (overline-heading-2 unspecified)
+      (overline-heading-3 unspecified)
+      (overline-heading-4 unspecified)
+      (overline-heading-5 unspecified)
+      (overline-heading-6 unspecified)
+      (overline-heading-7 unspecified)
+      (overline-heading-8 unspecified))
     "The `standard-dark' palette.
 Color values have the form (COLOR-NAME HEX-VALUE) with the former
 as a symbol and the latter as a string.
