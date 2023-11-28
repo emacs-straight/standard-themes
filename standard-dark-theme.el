@@ -48,18 +48,21 @@
     :family 'standard)
 
   (defconst standard-dark-palette
-    '(;; Basic tones
+    '(
+;;; Basic values
+
       (bg-main     "#000000")
       (fg-main     "#ffffff")
       (bg-dim      "#202020")
       (fg-dim      "#a6a6a6")
       (bg-alt      "#363636")
       (fg-alt      "#a0afef")
-
       (bg-active   "#606060")
       (bg-inactive "#141414")
+      (border      "#606070")
 
-      ;; Basic hues for foreground values
+;; Basic accent foregrounds
+
       (red             "#ff6f60")
       (red-warmer      "#ff7f24")
       (red-cooler      "#ff778f")
@@ -108,7 +111,8 @@
       (bg-magenta-nuanced "#230631")
       (bg-cyan-nuanced    "#041529")
 
-      ;; Diffs
+;;; Diffs
+
       (bg-added          "#00331f")
       (bg-added-faint    "#002410")
       (bg-added-refine   "#03492f")
@@ -124,12 +128,19 @@
       (bg-removed-refine "#751a1f")
       (fg-removed        "#ff5f5f")
 
-      ;; Marks
-      (bg-mark-alt  "#002f4a") (fg-mark-alt  "#57cefa")
-      (bg-mark-del  "#440d09") (fg-mark-del  "#ff5f60")
-      (bg-mark-sel  "#333000") (fg-mark-sel  "#d0d082")
+;;; Marks
 
-      ;; Graphs
+      (bg-mark-alt  "#002f4a")
+      (fg-mark-alt  "#57cefa")
+
+      (bg-mark-del  "#440d09")
+      (fg-mark-del  "#ff5f60")
+
+      (bg-mark-sel  "#333000")
+      (fg-mark-sel  "#d0d082")
+
+;;; Graphs
+
       (red-graph-0-bg     "#b52c2c")
       (red-graph-1-bg     "#702020")
       (green-graph-0-bg   "#4fd100")
@@ -143,29 +154,26 @@
       (cyan-graph-0-bg    "#47dfea")
       (cyan-graph-1-bg    "#00808f")
 
-      ;; Special hues
-      (bg-fringe     bg-dim)
+;;; Special hues
+
       (bg-accent     "#ffc200")
       (bg-completion "#254b5f")
       (bg-hover      "#457b2f")
       (bg-hover-alt  "#00688b")
       (bg-hl-line    "#334815")
-      (bg-region     "#0000cd")
+      (bg-region     "#20009d")
       (fg-region     unspecified)
       (bg-paren      "#4f94cd")
       (bg-err        "#3f0d09") ; check with err
       (bg-warning    "#362f00") ; check with warning
       (bg-info       "#002f12") ; check with info
 
-      (border        "#606070")
-      (cursor        "#ffffff")
-
       (bg-mode-line-active        "#505050")
       (fg-mode-line-active        "#ffffff")
       (border-mode-line-active    "#959595")
       (bg-mode-line-inactive      "#323232")
-      (fg-mode-line-inactive      "#969696")
-      (border-mode-line-inactive  "#606060")
+      (fg-mode-line-inactive      "#a6a6a6")
+      (border-mode-line-inactive  "#606070")
 
       (bg-tab              "#333333")
       (bg-tab-inactive     "#4d4d4d")
@@ -179,10 +187,20 @@
       (underline-warning "#c0b000")
       (underline-info    "#22b022")
 
-      ;; Mappings
+;;; Mappings
+
+;;;; General mappings
+
+      (cursor fg-main)
+      (fringe bg-dim)
+      (name cyan-cooler)
+      (keybind blue-cooler)
+
       (err red)
       (warning yellow-warmer)
       (info green)
+
+;;;; Date mappings
 
       (date-common cyan-warmer)
       (date-deadline red)
@@ -194,10 +212,12 @@
       (date-weekday cyan-warmer)
       (date-weekend red)
 
-      (name cyan-cooler)
-      (keybind blue-cooler)
+;;;; Prompt mappings
+
       (bg-prompt unspecified)
       (fg-prompt blue)
+
+;;;; Code mappings
 
       (builtin blue-faint)
       (comment red-warmer)
@@ -209,14 +229,24 @@
       (string yellow-cooler)
       (type green-cooler)
       (variable yellow)
-
       (rx-escape green) ; compare with `string'
       (rx-construct fg-main)
+
+;;;; Accent mappings
 
       (accent-0 blue-warmer)
       (accent-1 red-cooler)
       (accent-2 green)
       (accent-3 magenta-cooler)
+
+;;;; Line number mappings
+
+      (fg-line-number-inactive fg-dim)
+      (fg-line-number-active fg-main)
+      (bg-line-number-inactive unspecified)
+      (bg-line-number-active unspecified)
+
+;;;; Link mappings
 
       (fg-link cyan)
       (bg-link unspecified)
@@ -226,14 +256,18 @@
       (bg-link-visited unspecified)
       (underline-link-visited magenta)
 
-      (mail-0 red-cooler)
-      (mail-1 magenta-warmer)
-      (mail-2 green)
-      (mail-3 cyan-cooler)
+;;;; Mail mappings
+
+      (mail-0 magenta-warmer)
+      (mail-1 cyan-cooler)
+      (mail-2 yellow)
+      (mail-3 red)
       (mail-4 blue-warmer)
       (mail-recipient blue)
       (mail-subject magenta-cooler)
       (mail-other cyan)
+
+;;;; Rainbow mappings
 
       (rainbow-0 "#afeeee")
       (rainbow-1 cyan-warmer)
@@ -244,6 +278,14 @@
       (rainbow-6 cyan-cooler)
       (rainbow-7 blue-faint)
       (rainbow-8 yellow-cooler)
+
+;;;; Space mappings
+
+      (bg-space unspecified)
+      (fg-space border)
+      (bg-space-err bg-red-intense)
+
+;;;; Prose mappings
 
       (prose-code cyan-cooler)
       (prose-macro green-warmer)
