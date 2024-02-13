@@ -1127,6 +1127,8 @@ everything most users need.
 - elfeed
 - embark
 - epa
+- erc [ Part of {{{development-version}}}. ]
+- ert [ Part of {{{development-version}}}. ]
 - eshell
 - eww
 - flycheck
@@ -1197,6 +1199,7 @@ everything most users need.
 - widget
 - writegood-mode
 - woman
+- ztree [ Part of {{{development-version}}}. ]
 
 ** Implicitly supported packages or face groups
 :PROPERTIES:
