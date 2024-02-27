@@ -1339,7 +1339,7 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(git-rebase-description ((,c :foreground ,fg-main)))
     `(git-rebase-hash ((,c :foreground ,constant)))
 ;;;; gnus
-    `(gnus-button ((,c :inherit button)))
+    `(gnus-button ((,c :inherit button :underline nil)))
     `(gnus-cite-1 ((,c :inherit message-cited-text-1)))
     `(gnus-cite-2 ((,c :inherit message-cited-text-2)))
     `(gnus-cite-3 ((,c :inherit message-cited-text-3)))
@@ -1651,6 +1651,7 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(mu4e-replied-face ((,c :foreground ,info)))
     `(mu4e-special-header-value-face ((,c :inherit message-header-subject)))
     `(mu4e-system-face ((,c :inherit italic)))
+    `(mu4e-thread-fold-face ((,c :foreground ,border)))
     `(mu4e-title-face (( )))
     `(mu4e-trashed-face ((,c :foreground ,err)))
     `(mu4e-unread-face ((,c :inherit bold)))
