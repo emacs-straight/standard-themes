@@ -1,0 +1,2 @@
+;; Generated package description from standard-themes.el  -*- no-byte-compile: t -*-
+(define-package "standard-themes" "2.0.1.0.20240427.84421" "Like the default theme but more consistent" '((emacs "27.1")) :commit "ae5377bc4972469138f09dd3c5de00d458ba628c" :authors '(("Protesilaos Stavrou" . "info@protesilaos.com")) :maintainer '("Protesilaos Stavrou" . "info@protesilaos.com") :keywords '("faces" "theme" "accessibility") :url "https://github.com/protesilaos/standard-themes")
