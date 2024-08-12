@@ -5,7 +5,7 @@
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/standard-themes
-;; Version: 2.0.1
+;; Version: 2.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: faces, theme, accessibility
 
@@ -824,7 +824,7 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(comint-highlight-input ((,c :inherit bold)))
     `(comint-highlight-prompt ((,c :inherit standard-themes-prompt)))
     `(edmacro-label ((,c :inherit bold :foreground ,accent-0)))
-    `(elisp-shorthand-font-lock-face ((,c :inherit italic)))
+    `(elisp-shorthand-font-lock-face ((,c :inherit (italic font-lock-preprocessor-face))))
     `(error ((,c :inherit bold :foreground ,err)))
     `(escape-glyph ((,c :foreground ,warning)))
     `(fringe ((,c :background ,fringe :foreground ,fg-main)))
@@ -1693,6 +1693,8 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(nerd-icons-red-alt ((,c :foreground ,red-cooler)))
     `(nerd-icons-silver ((,c :foreground "gray50")))
     `(nerd-icons-yellow ((,c :foreground ,yellow)))
+;;;;; nerd-icons-completion
+    `(nerd-icons-completion-dir-face ((,c :foreground ,accent-0)))
 ;;;; nerd-icons-dired
     `(nerd-icons-dired-dir-face ((,c :foreground ,accent-0)))
 ;;;; nerd-icons-ibuffer
