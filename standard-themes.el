@@ -6,7 +6,7 @@
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/standard-themes
 ;; Version: 2.1.0
-;; Package-Requires: ((emacs "27.1"))
+;; Package-Requires: ((emacs "28.1"))
 ;; Keywords: faces, theme, accessibility
 
 ;; This file is NOT part of GNU Emacs.
@@ -26,10 +26,12 @@
 
 ;;; Commentary:
 ;;
-;; The `standard-themes' are a pair of light and dark themes for GNU
-;; Emacs.  They emulate the out-of-the-box looks of Emacs (which
-;; technically do NOT constitute a theme) while bringing to them
-;; thematic consistency, customizability, and extensibility.
+;; The `standard-themes' are a collection of light and dark themes for
+;; GNU Emacs.  The `standard-light' and `standard-dark' emulate the
+;; out-of-the-box looks of Emacs (which technically do NOT constitute
+;; a theme) while bringing to them thematic consistency,
+;; customizability, and extensibility.  Other themes are stylistic
+;; variations of those.
 ;;
 ;; Why call them "standard"?  Obviously because: Standard Themes Are
 ;; Not Derivatives but the Affectionately Reimagined Default ... themes.
@@ -49,8 +51,38 @@
 
 ;;; User options
 
-(defconst standard-themes-items '(standard-dark standard-light)
+(defvaralias 'standard-themes-collection 'standard-themes-items
+  "Alias of `standard-themes-items'.")
+
+(defconst standard-themes-items
+  '(standard-light standard-light-tinted standard-dark standard-dark-tinted)
   "Symbols of the Standard themes.")
+
+(defcustom standard-themes-to-toggle '(standard-light standard-dark)
+  "Specify two Standard themes for the `standard-themes-toggle' command.
+The variable `standard-themes-items' contains the symbols of all
+themes that form part of this collection."
+  :type `(choice
+          (const :tag "No toggle (default)" nil)
+          (list :tag "Pick two themes to toggle between"
+                (choice :tag "Theme one of two"
+                        ,@(mapcar (lambda (theme)
+                                    (list 'const theme))
+                                  standard-themes-items))
+                (choice :tag "Theme two of two"
+                        ,@(mapcar (lambda (theme)
+                                    (list 'const theme))
+                                  standard-themes-items))))
+  :package-version '(standard-themes . "2.2.0")
+  :group 'standard-themes)
+
+(defcustom standard-themes-to-rotate standard-themes-items
+  "List of Standard themes to rotate among, per `standard-themes-rotate'."
+  :type `(repeat (choice
+                  :tag "A theme among the `standard-themes-items'"
+                  ,@(mapcar (lambda (theme) (list 'const theme)) standard-themes-items)))
+  :package-version '(standard-themes . "2.2.0")
+  :group 'standard-themes)
 
 (defcustom standard-themes-disable-other-themes t
   "Disable all other themes when loading a Standard theme.
@@ -72,6 +104,9 @@ set this variable to a nil value."
   :group 'standard-themes
   :package-version '(standard-themes . "1.2.0")
   :type 'boolean)
+
+(defvaralias 'standard-themes-after-load-theme-hook 'standard-themes-post-load-hook
+  "Alias for `standard-themes-post-load-hook'.")
 
 (defcustom standard-themes-post-load-hook nil
   "Hook that runs after loading a Standard theme.
@@ -538,6 +573,65 @@ overrides."
         (standard-themes--palette-value theme))
     (user-error "No enabled Standard theme could be found")))
 
+(defun standard-themes--annotate-theme (theme)
+  "Return completion annotation for THEME."
+  (when-let* ((symbol (intern-soft theme))
+              (doc-string (get symbol 'theme-documentation)))
+    (format " -- %s"
+            (propertize (car (split-string doc-string "\\."))
+                        'face 'completions-annotations))))
+
+(defun standard-themes--standard-p (theme)
+  "Return non-nil if THEME name has a standard- prefix."
+  (string-prefix-p "standard-" (symbol-name theme)))
+
+(defvar standard-themes--select-theme-history nil
+  "Minibuffer history of `standard-themes--select-prompt'.")
+
+(defun standard-themes--completion-table (category candidates)
+  "Pass appropriate metadata CATEGORY to completion CANDIDATES."
+  (lambda (string pred action)
+    (if (eq action 'metadata)
+        `(metadata (category . ,category))
+      (complete-with-action action candidates string pred))))
+
+(defun standard-themes--completion-table-candidates ()
+  "Render `standard-themes--list-known-themes' as completion with theme category."
+  (standard-themes--completion-table 'theme (standard-themes--list-known-themes)))
+
+(defun standard-themes--select-prompt (&optional prompt)
+  "Minibuffer prompt to select a Standard theme.
+With optional PROMPT string, use it.  Else use a generic prompt."
+  (let ((completion-extra-properties `(:annotation-function ,#'standard-themes--annotate-theme)))
+    (intern
+     (completing-read
+      (or prompt "Select Standard theme: ")
+      (standard-themes--completion-table-candidates)
+      nil t nil 'standard-themes--select-theme-history))))
+
+(defun standard-themes-load-theme (theme)
+  "Load THEME while disabling other themes.
+
+Which themes are disabled is determined by the user option
+`standard-themes-disable-other-themes'.
+
+Run the `standard-themes-after-load-theme-hook' as the final step
+after loading the THEME.
+
+Return THEME."
+  (standard-themes--disable-themes)
+  (load-theme theme :no-confirm)
+  (run-hooks 'standard-themes-post-load-hook)
+  theme)
+
+;;;###autoload
+(defun standard-themes-select (theme)
+  "Load a Standard THEME using minibuffer completion.
+Run `standard-themes-after-load-theme-hook' after loading the theme.
+Disable other themes per `standard-themes-disable-other-themes'."
+  (interactive (list (standard-themes--select-prompt)))
+  (standard-themes-load-theme theme))
+
 (defun standard-themes--disable-themes ()
   "Disable themes per `standard-themes-disable-other-themes'."
   (mapc #'disable-theme
@@ -552,117 +646,160 @@ Run `standard-themes-post-load-hook'."
   (load-theme theme :no-confirm)
   (run-hooks 'standard-themes-post-load-hook))
 
-;;;###autoload
-(defun standard-themes-load-dark ()
-  "Load `standard-dark' and run `standard-themes-post-load-hook'."
-  (interactive)
-  (standard-themes--load-theme 'standard-dark))
+(make-obsolete 'standard-themes-load-dark 'standard-themes-load-theme "2.2.0")
+(make-obsolete 'standard-themes-load-light 'standard-themes-load-theme "2.2.0")
 
-;;;###autoload
-(defun standard-themes-load-light ()
-  "Load `standard-light' and run `standard-themes-post-load-hook'."
-  (interactive)
-  (standard-themes--load-theme 'standard-light))
+(defun standard-themes--toggle-theme-p ()
+  "Return non-nil if `standard-themes-to-toggle' are valid."
+  (condition-case nil
+      (dolist (theme standard-themes-to-toggle)
+        (or (memq theme standard-themes-items)
+            (memq theme (standard-themes--list-known-themes))
+            (error "`%s' is not part of `standard-themes-items'" theme)))
+    (error nil)
+    (:success standard-themes-to-toggle)))
 
-(defun standard-themes--load-prompt ()
-  "Helper for `standard-themes-toggle'."
-  (let ((theme
-         (intern
-          (completing-read "Load Standard theme (will disable all others): "
-                           standard-themes-items nil t))))
-    (standard-themes--disable-themes)
-    (pcase theme
-      ('standard-light (standard-themes-load-light))
-      ('standard-dark (standard-themes-load-dark)))))
+;;;; Toggle between two themes
 
 ;;;###autoload
 (defun standard-themes-toggle ()
-  "Toggle between the `standard-dark' and `standard-light' themes.
+  "Toggle between the two `standard-themes-to-toggle'.
+If `standard-themes-to-toggle' does not specify two Standard themes,
+inform the user about it while prompting with completion for a theme
+among our collection (this is practically the same as the
+`standard-themes-select' command).
+
 Run `standard-themes-post-load-hook' after loading the theme."
   (interactive)
-  (pcase (standard-themes--current-theme)
-    ('standard-light (standard-themes-load-dark))
-    ('standard-dark (standard-themes-load-light))
-    (_ (standard-themes--load-prompt))))
+  (if (standard-themes--toggle-theme-p)
+      (pcase-let ((`(,one ,two) standard-themes-to-toggle))
+        (if (eq (car custom-enabled-themes) one)
+            (standard-themes-load-theme two)
+          (standard-themes-load-theme one)))
+    (standard-themes-load-theme
+     (standard-themes--select-prompt
+      (concat "Set two `standard-themes-to-toggle'; "
+              "switching to theme selection for now: ")))))
 
-(defun standard-themes--preview-colors-render (buffer theme &optional mappings &rest _)
-  "Render colors in BUFFER from THEME for `standard-themes-preview-colors'.
-Optional MAPPINGS changes the output to only list the semantic
-color mappings of the palette, instead of its named colors."
+;;;; Rotate through a list of themes
+
+(defun standard-themes--rotate (themes)
+  "Rotate THEMES rightward such that the car is moved to the end."
+  (if (proper-list-p themes)
+      (let* ((index (seq-position themes (standard-themes--current-theme)))
+             (offset (1+ index)))
+        (append (nthcdr offset themes) (take offset themes)))
+    (error "The `%s' is not a list" themes)))
+
+(defun standard-themes--rotate-p (themes)
+  "Return a new theme among THEMES if it is possible to rotate to it."
+  (if-let* ((new-theme (car (standard-themes--rotate themes))))
+      (if (eq new-theme (standard-themes--current-theme))
+          (car (standard-themes--rotate-p (standard-themes--rotate themes)))
+        new-theme)
+    (error "Cannot determine a theme among `%s'" themes)))
+
+;;;###autoload
+(defun standard-themes-rotate (themes)
+  "Rotate to the next theme among THEMES.
+When called interactively THEMES is the value of `standard-themes-to-rotate'.
+
+If the current theme is already the next in line, then move to the one
+after.  Perform the rotation rightwards, such that the first element in
+the list becomes the last.  Do not modify THEMES in the process."
+  (interactive (list standard-themes-to-rotate))
+  (unless (proper-list-p themes)
+    "This is not a list of themes: `%s'" themes)
+  (let ((candidate (standard-themes--rotate-p themes)))
+    (if (standard-themes--standard-p candidate)
+        (progn
+          (message "Rotating to `%s'" (propertize (symbol-name candidate) 'face 'success))
+          (standard-themes-load-theme candidate))
+      (user-error "`%s' is not part of the Standard collection" candidate))))
+
+;;;; Preview a theme palette
+
+(defun standard-themes--list-colors-get-mappings (palette)
+  "Get the semantic palette entries in PALETTE.
+PALETTE is the value of a variable like `standard-light-palette'."
+  (seq-remove
+   (lambda (cell)
+     (stringp (cadr cell)))
+   palette))
+
+(defun standard-themes--list-colors-tabulated (theme &optional mappings)
+  "Return a data structure of THEME palette or MAPPINGS for tabulated list."
   (let* ((current-palette (standard-themes--palette-value theme mappings))
          (palette (if mappings
-                      (seq-remove (lambda (cell)
-                                    (stringp (cadr cell)))
-                                  current-palette)
-                    current-palette))
-         (current-buffer buffer)
-         (current-theme theme))
-    (with-help-window buffer
-      (with-current-buffer standard-output
-        (erase-buffer)
-        (when (<= (display-color-cells) 256)
-          (insert (concat "Your display terminal may not render all color previews!\n"
-                          "It seems to only support <= 256 colors.\n\n"))
-          (put-text-property (point-min) (point) 'face 'warning))
-        ;; We need this to properly render the first line.
-        (insert " ")
-        (dolist (cell palette)
-          (let* ((name (car cell))
-                 (color (standard-themes-get-color-value name mappings theme))
-                 (pad (make-string 10 ?\s))
-                 (fg (if (eq color 'unspecified)
-                         (progn
-                           (readable-foreground-color (standard-themes-get-color-value 'bg-main nil theme))
-                           (setq pad (make-string 6 ?\s)))
-                       (readable-foreground-color color))))
-            (let ((old-point (point)))
-              (insert (format "%s %s" color pad))
-              (put-text-property old-point (point) 'face `( :foreground ,color)))
-            (let ((old-point (point)))
-              (insert (format " %s %s %s\n" color pad name))
-              (put-text-property old-point (point)
-                                 'face `( :background ,color
-                                          :foreground ,fg
-                                          :extend t)))
-            ;; We need this to properly render the last line.
-            (insert " ")))
-        (setq-local revert-buffer-function
-                    (lambda (_ignore-auto _noconfirm)
-                      (standard-themes--preview-colors-render current-buffer current-theme mappings)))))))
+                      (standard-themes--list-colors-get-mappings current-palette)
+                    current-palette)))
+    (mapcar (lambda (cell)
+              (pcase-let* ((`(,name ,value) cell)
+                           (name-string (format "%s" name))
+                           (value-string (format "%s" value))
+                           (value-string-padded (string-pad value-string 30))
+                           (color (standard-themes-get-color-value name mappings theme))) ; resolve a semantic mapping
+                (list name
+                      (vector
+                       (if (symbolp value)
+                           "Yes"
+                         "")
+                       name-string
+                       (propertize value-string 'face `( :foreground ,color))
+                       (propertize value-string-padded 'face (list :background color
+                                                                   :foreground (if (string= color "unspecified")
+                                                                                   (readable-foreground-color (standard-themes-get-color-value 'bg-main nil theme))
+                                                                                 (readable-foreground-color color))))))))
+            palette)))
 
-(defvar standard-themes--preview-colors-prompt-history '()
-  "Minibuffer history for `standard-themes--preview-colors-prompt'.")
+(defvar standard-themes-current-preview nil)
+(defvar standard-themes-current-preview-show-mappings nil)
 
-(defun standard-themes--preview-colors-prompt ()
-  "Prompt for Standard theme.
-Helper function for `standard-themes-preview-colors'."
-  (let ((def (format "%s" (standard-themes--current-theme))))
-    (completing-read
-     (format "Use palette from theme [%s]: " def)
-     (standard-themes--list-known-themes) nil t nil
-     'standard-themes--preview-colors-prompt-history def)))
+(defun standard-themes--set-tabulated-entries ()
+  "Set the value of `tabulated-list-entries' with palette entries."
+  (setq-local tabulated-list-entries
+              (standard-themes--list-colors-tabulated standard-themes-current-preview standard-themes-current-preview-show-mappings)))
 
-(defun standard-themes-preview-colors (theme &optional mappings)
-  "Preview named colors of the Standard THEME of choice.
-With optional prefix argument for MAPPINGS preview the semantic
-color mappings instead of the named colors."
-  (interactive (list (intern (standard-themes--preview-colors-prompt)) current-prefix-arg))
-  (standard-themes--preview-colors-render
-   (format (if mappings "*%s-preview-mappings*" "*%s-preview-colors*") theme)
-   theme
-   mappings))
+(defun standard-themes-list-colors (theme &optional mappings)
+  "Preview the palette of the Standard THEME of choice.
+With optional prefix argument for MAPPINGS preview only the semantic
+color mappings instead of the complete palette."
+  (interactive
+   (let ((prompt (if current-prefix-arg
+                     "Preview palette mappings of THEME: "
+                   "Preview palette of THEME: ")))
+     (list
+      (standard-themes--select-prompt prompt)
+      current-prefix-arg)))
+  (let ((buffer (get-buffer-create (format (if mappings "*%s-list-mappings*" "*%s-list-all*") theme))))
+    (with-current-buffer buffer
+      (let ((standard-themes-current-preview theme)
+            (standard-themes-current-preview-show-mappings mappings))
+        (standard-themes-preview-mode)))
+    (pop-to-buffer buffer)))
 
-(defalias 'standard-themes-list-colors 'standard-themes-preview-colors
-  "Alias of `standard-themes-preview-colors'.")
+(defalias 'standard-themes-preview-colors 'standard-themes-list-colors
+  "Alias for `standard-themes-list-colors'.")
 
-(defun standard-themes-preview-colors-current (&optional mappings)
-  "Call `standard-themes-list-colors' for the current Standard theme.
-Optional prefix argument MAPPINGS has the same meaning as for
-`standard-themes-list-colors'."
+(defun standard-themes-list-colors-current (&optional mappings)
+  "Like `standard-themes-list-colors' with optional MAPPINGS for the current theme."
   (interactive "P")
   (standard-themes-list-colors (standard-themes--current-theme) mappings))
 
-(defalias 'standard-themes-list-colors-current 'standard-themes-preview-colors-current
+(defalias 'standard-themes-preview-colors-current 'standard-themes-list-colors-current
+  "Alias for `standard-themes-list-colors-current'.")
+
+(define-derived-mode standard-themes-preview-mode tabulated-list-mode "Standard palette"
+  "Major mode to display a Standard themes palette."
+  :interactive nil
+  (setq-local tabulated-list-format
+              [("Mapping?" 10 t)
+               ("Symbol name" 30 t)
+               ("As foreground" 30 t)
+               ("As background" 0 t)])
+  (standard-themes--set-tabulated-entries)
+  (tabulated-list-init-header)
+  (tabulated-list-print)
   "Alias of `standard-themes-preview-colors-current'.")
 
 ;;; Faces and variables
@@ -1442,6 +1579,19 @@ Optional prefix argument MAPPINGS has the same meaning as for
 ;;;; keycast
     `(keycast-command ((,c :inherit bold :foreground ,bg-accent)))
     `(keycast-key ((,c :background ,bg-accent :foreground ,bg-main)))
+;;;; lin
+    `(lin-blue ((,c :background ,bg-blue-subtle)))
+    `(lin-cyan ((,c :background ,bg-cyan-subtle)))
+    `(lin-green ((,c :background ,bg-green-subtle)))
+    `(lin-magenta ((,c :background ,bg-magenta-subtle)))
+    `(lin-red ((,c :background ,bg-red-subtle)))
+    `(lin-yellow ((,c :background ,bg-yellow-subtle)))
+    `(lin-blue-override-fg ((,c :background ,bg-blue-subtle :foreground ,fg-main)))
+    `(lin-cyan-override-fg ((,c :background ,bg-cyan-subtle :foreground ,fg-main)))
+    `(lin-green-override-fg ((,c :background ,bg-green-subtle :foreground ,fg-main)))
+    `(lin-magenta-override-fg ((,c :background ,bg-magenta-subtle :foreground ,fg-main)))
+    `(lin-red-override-fg ((,c :background ,bg-red-subtle :foreground ,fg-main)))
+    `(lin-yellow-override-fg ((,c :background ,bg-yellow-subtle :foreground ,fg-main)))
 ;;;; line numbers (display-line-numbers-mode and global variant)
     ;; Here we cannot inherit `standard-themes-fixed-pitch'.  We need to
     ;; fall back to `default' otherwise line numbers do not scale when
@@ -1891,6 +2041,13 @@ Optional prefix argument MAPPINGS has the same meaning as for
     `(powerline-inactive0 ((,c :background ,bg-active :foreground ,fg-dim)))
     `(powerline-inactive1 ((,c :background ,bg-main :foreground ,fg-dim)))
     `(powerline-inactive2 ((,c :inherit mode-line-inactive)))
+;;;; pulsar
+    `(pulsar-blue ((,c :background ,bg-blue-subtle)))
+    `(pulsar-cyan ((,c :background ,bg-cyan-subtle)))
+    `(pulsar-green ((,c :background ,bg-green-subtle)))
+    `(pulsar-magenta ((,c :background ,bg-magenta-subtle)))
+    `(pulsar-red ((,c :background ,bg-red-subtle)))
+    `(pulsar-yellow ((,c :background ,bg-yellow-subtle)))
 ;;;; rainbow-delimiters
     `(rainbow-delimiters-base-error-face ((,c :inherit (bold rainbow-delimiters-mismatched-face))))
     `(rainbow-delimiters-base-face    ((,c :foreground ,rainbow-0)))

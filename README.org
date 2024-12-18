@@ -70,10 +70,14 @@ modify this GNU manual.”
 :CUSTOM_ID: h:fd5bf657-937d-4e42-b936-b423ef4f45ee
 :END:
 
-The ~standard-themes~ are a pair of light and dark themes for GNU
-Emacs.  They emulate the out-of-the-box looks of Emacs (which
-technically do NOT constitute a theme) while bringing to them thematic
-consistency, customizability, and extensibility.
+The ~standard-themes~ are a collection of light and dark themes for
+GNU Emacs. The ~standard-light~ and ~standard-dark~ emulate the
+out-of-the-box looks of Emacs (which technically do NOT constitute a
+theme) while bringing to them thematic consistency, customizability,
+and extensibility. Other themes are stylistic variations of those.
+
+Why call them "standard"? Obviously because: Standard Themes Are Not
+Derivatives but the Affectionately Reimagined Default ... themes.
 
 * Installation
 :PROPERTIES:
@@ -146,6 +150,8 @@ Everything is in place to set up the package.
       standard-themes-mixed-fonts t
       standard-themes-variable-pitch-ui t
       standard-themes-prompts '(extrabold italic)
+      standard-themes-to-toggle '(standard-light standard-dark)
+      standard-themes-to-rotate '(standard-light standard-light-tinted standard-dark standard-dark-tinted)
 
       ;; more complex alist to set weight, height, and optional
       ;; `variable-pitch' per heading level (t is for any level not
@@ -163,9 +169,11 @@ Everything is in place to set up the package.
         (agenda-structure . (variable-pitch light 1.8))
         (t . (variable-pitch 1.1))))
 
-(standard-themes-load-light) ; OR (standard-themes-load-dark)
+;; All the Standard themes are listed in `standard-themes-items'.
+(standard-themes-load-theme 'standard-light)
 
 (define-key global-map (kbd "<f5>") #'standard-themes-toggle)
+(define-key global-map (kbd "M-<f5>") #'standard-themes-rotate)
 #+end_src
 
 * Customization options
@@ -201,6 +209,30 @@ This option is provided because Emacs themes are not necessarily
 limited to colors/faces: they can consist of an arbitrary set of
 customizations.  Users who use such customization bundles must set
 this variable to a nil value.
+
+** Option for themes to toggle
+:PROPERTIES:
+:CUSTOM_ID: h:e06a546a-4fb3-4112-8aa2-d80031d89d5c
+:END:
+
+[ Part of {{{development-version}}}. ]
+
+#+vindex: standard-themes-to-toggle
+The user option ~standard-themes-to-toggle~ is a list of Standard
+themes to switch between when using the command ~standard-themes-toggle~.
+
+The list must include two items. If there are more, they are ignored.
+
+** Option for themes to rotate
+:PROPERTIES:
+:CUSTOM_ID: h:90131405-9fdb-44cd-b0d2-a9e1fa8f45ac
+:END:
+
+[ Part of {{{development-version}}}. ]
+
+#+vindex: standard-themes-to-rotate
+The user option ~standard-themes-to-rotate~ is a list of Standard
+themes to switch between when using the command ~standard-themes-rotate~.
 
 ** Option to enable mixed fonts
 :PROPERTIES:
@@ -1145,7 +1177,7 @@ everything most users need.
 - isearch, occur, query-replace
 - jit-spell
 - keycast
-- lin
+- lin [ Part of {{{development-version}}}. ]
 - line numbers (~display-line-numbers-mode~ and global variant)
 - magit
 - man
@@ -1170,7 +1202,7 @@ everything most users need.
 - package (=M-x list-packages=)
 - perspective
 - powerline
-- pulsar
+- pulsar [ Part of {{{development-version}}}. ]
 - pulse
 - rainbow-delimiters
 - rcirc
