@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the Emacs package
 called `standard-themes', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 2.1.0,
-released on 2024-08-11.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 2.2.0,
+released on 2024-12-29.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 2.2.0-dev.
+Current development target is 2.3.0-dev.
 
 ⁃ Package name (GNU ELPA): `standard-themes'
 ⁃ Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -244,8 +244,6 @@ Table of Contents
 5.2 Option for themes to toggle
 ───────────────────────────────
 
-  [ Part of 2.2.0-dev. ]
-
   The user option `standard-themes-to-toggle' is a list of Standard
   themes to switch between when using the command
   `standard-themes-toggle'.
@@ -255,8 +253,6 @@ Table of Contents
 
 5.3 Option for themes to rotate
 ───────────────────────────────
-
-  [ Part of 2.2.0-dev. ]
 
   The user option `standard-themes-to-rotate' is a list of Standard
   themes to switch between when using the command
@@ -1227,7 +1223,7 @@ Table of Contents
   • isearch, occur, query-replace
   • jit-spell
   • keycast
-  • lin [ Part of 2.2.0-dev. ]
+  • lin
   • line numbers (`display-line-numbers-mode' and global variant)
   • magit
   • man
@@ -1252,7 +1248,7 @@ Table of Contents
   • package (`M-x list-packages')
   • perspective
   • powerline
-  • pulsar [ Part of 2.2.0-dev. ]
+  • pulsar
   • pulse
   • rainbow-delimiters
   • rcirc

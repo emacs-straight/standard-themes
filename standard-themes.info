@@ -1,4 +1,4 @@
-This is docJUqZMp.info, produced by makeinfo version 6.8 from
+This is doc5gZhQH.info, produced by makeinfo version 6.8 from
 standard-themes.texi.
 
 Copyright (C) 2022-2023 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docJUqZMp.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
+File: doc5gZhQH.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
 
 standard-themes: Like the default theme but more consistent
 ***********************************************************
@@ -43,11 +43,11 @@ package called ‘standard-themes’, and provides every other piece of
 information pertinent to it.
 
    The documentation furnished herein corresponds to stable version
-2.1.0, released on 2024-08-11.  Any reference to a newer feature which
+2.2.0, released on 2024-12-29.  Any reference to a newer feature which
 does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
-   Current development target is 2.2.0-dev.
+   Current development target is 2.3.0-dev.
 
    • Package name (GNU ELPA): ‘standard-themes’
    • Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -125,7 +125,7 @@ Indices
 
 
 
-File: docJUqZMp.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
+File: doc5gZhQH.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
 
 1 About the Standard themes
 ***************************
@@ -140,7 +140,7 @@ extensibility.  Other themes are stylistic variations of those.
 Derivatives but the Affectionately Reimagined Default ... themes.
 
 
-File: docJUqZMp.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
+File: doc5gZhQH.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
 
 2 Installation
 **************
@@ -151,7 +151,7 @@ File: docJUqZMp.info,  Node: Installation,  Next: Sample configuration,  Prev: A
 * Manual installation::
 
 
-File: docJUqZMp.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: doc5gZhQH.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -170,7 +170,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docJUqZMp.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: doc5gZhQH.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -197,7 +197,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docJUqZMp.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
+File: doc5gZhQH.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -240,7 +240,7 @@ File: docJUqZMp.info,  Node: Sample configuration,  Next: Customization options,
      (define-key global-map (kbd "M-<f5>") #'standard-themes-rotate)
 
 
-File: docJUqZMp.info,  Node: Customization options,  Next: Loading a theme,  Prev: Sample configuration,  Up: Top
+File: doc5gZhQH.info,  Node: Customization options,  Next: Loading a theme,  Prev: Sample configuration,  Up: Top
 
 4 Customization options
 ***********************
@@ -264,7 +264,7 @@ theme.  Any change after the theme has been loaded requires a re-load
 * Palette overrides::
 
 
-File: docJUqZMp.info,  Node: Option to disable other themes,  Next: Option for themes to toggle,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option to disable other themes,  Next: Option for themes to toggle,  Up: Customization options
 
 4.1 Option to disable other themes
 ==================================
@@ -289,34 +289,28 @@ customizations.  Users who use such customization bundles must set this
 variable to a nil value.
 
 
-File: docJUqZMp.info,  Node: Option for themes to toggle,  Next: Option for themes to rotate,  Prev: Option to disable other themes,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option for themes to toggle,  Next: Option for themes to rotate,  Prev: Option to disable other themes,  Up: Customization options
 
 4.2 Option for themes to toggle
 ===============================
 
-[ Part of 2.2.0-dev.  ]
-
-   The user option ‘standard-themes-to-toggle’ is a list of Standard
-themes to switch between when using the command
-‘standard-themes-toggle’.
+The user option ‘standard-themes-to-toggle’ is a list of Standard themes
+to switch between when using the command ‘standard-themes-toggle’.
 
    The list must include two items.  If there are more, they are
 ignored.
 
 
-File: docJUqZMp.info,  Node: Option for themes to rotate,  Next: Option to enable mixed fonts,  Prev: Option for themes to toggle,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option for themes to rotate,  Next: Option to enable mixed fonts,  Prev: Option for themes to toggle,  Up: Customization options
 
 4.3 Option for themes to rotate
 ===============================
 
-[ Part of 2.2.0-dev.  ]
-
-   The user option ‘standard-themes-to-rotate’ is a list of Standard
-themes to switch between when using the command
-‘standard-themes-rotate’.
+The user option ‘standard-themes-to-rotate’ is a list of Standard themes
+to switch between when using the command ‘standard-themes-rotate’.
 
 
-File: docJUqZMp.info,  Node: Option to enable mixed fonts,  Next: Option to control the UI typeface,  Prev: Option for themes to rotate,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option to enable mixed fonts,  Next: Option to control the UI typeface,  Prev: Option for themes to rotate,  Up: Customization options
 
 4.4 Option to enable mixed fonts
 ================================
@@ -347,7 +341,7 @@ family of the ‘fixed-pitch’ and ‘variable-pitch’ faces.  The ‘fontaine
 package on GNU ELPA (by Protesilaos) can be helpful in this regard.
 
 
-File: docJUqZMp.info,  Node: Option to control the UI typeface,  Next: Option to enable more bold constructs,  Prev: Option to enable mixed fonts,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option to control the UI typeface,  Next: Option to enable more bold constructs,  Prev: Option to enable mixed fonts,  Up: Customization options
 
 4.5 Option to control the UI typeface
 =====================================
@@ -372,7 +366,7 @@ family of the ‘fixed-pitch’ and ‘variable-pitch’ faces.  The ‘fontaine
 package on GNU ELPA (by Protesilaos) can be helpful in this regard.
 
 
-File: docJUqZMp.info,  Node: Option to enable more bold constructs,  Next: Option to enable more italic constructs,  Prev: Option to control the UI typeface,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option to enable more bold constructs,  Next: Option to enable more italic constructs,  Prev: Option to control the UI typeface,  Up: Customization options
 
 4.6 Option to enable more bold constructs
 =========================================
@@ -385,7 +379,7 @@ builtins, and a few other elements.
    *note Configure bold and italic faces::.
 
 
-File: docJUqZMp.info,  Node: Option to enable more italic constructs,  Next: Option for command prompts,  Prev: Option to enable more bold constructs,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option to enable more italic constructs,  Next: Option for command prompts,  Prev: Option to enable more bold constructs,  Up: Customization options
 
 4.7 Option to enable more italic constructs
 ===========================================
@@ -398,7 +392,7 @@ comments, doc strings, and a few other minor elements.
    *note Configure bold and italic faces::.
 
 
-File: docJUqZMp.info,  Node: Option for command prompts,  Next: Option for headings,  Prev: Option to enable more italic constructs,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option for command prompts,  Next: Option for headings,  Prev: Option to enable more italic constructs,  Up: Customization options
 
 4.8 Option for command prompts
 ==============================
@@ -452,7 +446,7 @@ in these examples:
 applying palette overrides (*note Palette overrides::).
 
 
-File: docJUqZMp.info,  Node: Option for headings,  Next: Palette overrides,  Prev: Option for command prompts,  Up: Customization options
+File: doc5gZhQH.info,  Node: Option for headings,  Next: Palette overrides,  Prev: Option for command prompts,  Up: Customization options
 
 4.9 Option for headings
 =======================
@@ -561,7 +555,7 @@ done in older versions of the themes).
 modified by applying palette overrides (*note Palette overrides::).
 
 
-File: docJUqZMp.info,  Node: Palette overrides,  Prev: Option for headings,  Up: Customization options
+File: doc5gZhQH.info,  Node: Palette overrides,  Prev: Option for headings,  Up: Customization options
 
 4.10 Palette overrides
 ======================
@@ -627,7 +621,7 @@ is the override and the second is the original one.
    Contact me if you need further help with this.
 
 
-File: docJUqZMp.info,  Node: Loading a theme,  Next: Preview theme colors,  Prev: Customization options,  Up: Top
+File: doc5gZhQH.info,  Node: Loading a theme,  Next: Preview theme colors,  Prev: Customization options,  Up: Top
 
 5 Loading a theme
 *****************
@@ -660,7 +654,7 @@ approach to advanced DIY changes.).  These two functions are also called
 by the command ‘standard-themes-toggle’.
 
 
-File: docJUqZMp.info,  Node: Preview theme colors,  Next: Use colors from the active Standard theme,  Prev: Loading a theme,  Up: Top
+File: doc5gZhQH.info,  Node: Preview theme colors,  Next: Use colors from the active Standard theme,  Prev: Loading a theme,  Up: Top
 
 6 Preview theme colors
 **********************
@@ -696,7 +690,7 @@ colors and ‘=*standard-light-list-mappings*’ for the semantic color
 mappings.
 
 
-File: docJUqZMp.info,  Node: Use colors from the active Standard theme,  Next: Do-It-Yourself customizations,  Prev: Preview theme colors,  Up: Top
+File: doc5gZhQH.info,  Node: Use colors from the active Standard theme,  Next: Do-It-Yourself customizations,  Prev: Preview theme colors,  Up: Top
 
 7 Use colors from the active Standard theme
 *******************************************
@@ -725,7 +719,7 @@ or color mapping are still possible.  At any rate, we will not outright
 break any code that uses ‘standard-themes-with-colors’.
 
 
-File: docJUqZMp.info,  Node: Do-It-Yourself customizations,  Next: Faces defined by the Standard themes,  Prev: Use colors from the active Standard theme,  Up: Top
+File: doc5gZhQH.info,  Node: Do-It-Yourself customizations,  Next: Faces defined by the Standard themes,  Prev: Use colors from the active Standard theme,  Up: Top
 
 8 Do-It-Yourself customizations
 *******************************
@@ -745,7 +739,7 @@ liking, often by employing the ‘standard-themes-with-colors’ macro
 * Tweak goto-address-mode faces::
 
 
-File: docJUqZMp.info,  Node: Get a single color from the palette,  Next: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: Get a single color from the palette,  Next: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
 
 8.1 Get a single color from the palette
 =======================================
@@ -799,7 +793,7 @@ with/without overrides and when recursive mappings are introduced.
      ;; => "#b3303a"
 
 
-File: docJUqZMp.info,  Node: The general approach to advanced DIY changes,  Next: A theme-agnostic hook for theme loading,  Prev: Get a single color from the palette,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: The general approach to advanced DIY changes,  Next: A theme-agnostic hook for theme loading,  Prev: Get a single color from the palette,  Up: Do-It-Yourself customizations
 
 8.2 The general approach to advanced DIY changes
 ================================================
@@ -890,7 +884,7 @@ mechanism.  We are willing to help and shall provide comprehensive
 documentation where necessary.
 
 
-File: docJUqZMp.info,  Node: A theme-agnostic hook for theme loading,  Next: Add support for hl-todo,  Prev: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: A theme-agnostic hook for theme loading,  Next: Add support for hl-todo,  Prev: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
 
 8.3 A theme-agnostic hook for theme loading
 ===========================================
@@ -942,7 +936,7 @@ though the user can replace it with ‘after-enable-theme-hook’ should
 they need to (provided they understand the implications).
 
 
-File: docJUqZMp.info,  Node: Add support for hl-todo,  Next: Configure bold and italic faces,  Prev: A theme-agnostic hook for theme loading,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: Add support for hl-todo,  Next: Configure bold and italic faces,  Prev: A theme-agnostic hook for theme loading,  Up: Do-It-Yourself customizations
 
 8.4 Add support for hl-todo
 ===========================
@@ -986,7 +980,7 @@ the latter method.
 commands for previewing the palette (*note Preview theme colors::).
 
 
-File: docJUqZMp.info,  Node: Configure bold and italic faces,  Next: Tweak org-modern timestamps,  Prev: Add support for hl-todo,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: Configure bold and italic faces,  Next: Tweak org-modern timestamps,  Prev: Add support for hl-todo,  Up: Do-It-Yourself customizations
 
 8.5 Configure bold and italic faces
 ===================================
@@ -1038,7 +1032,7 @@ pick fonts that work in tandem):
 provides the means to configure font families via faces.
 
 
-File: docJUqZMp.info,  Node: Tweak org-modern timestamps,  Next: Tweak goto-address-mode faces,  Prev: Configure bold and italic faces,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: Tweak org-modern timestamps,  Next: Tweak goto-address-mode faces,  Prev: Configure bold and italic faces,  Up: Do-It-Yourself customizations
 
 8.6 Tweak ‘org-modern’ timestamps
 =================================
@@ -1069,7 +1063,7 @@ fonts.).
    For any further issues, you are welcome to ask for help.
 
 
-File: docJUqZMp.info,  Node: Tweak goto-address-mode faces,  Prev: Tweak org-modern timestamps,  Up: Do-It-Yourself customizations
+File: doc5gZhQH.info,  Node: Tweak goto-address-mode faces,  Prev: Tweak org-modern timestamps,  Up: Do-It-Yourself customizations
 
 8.7 Tweak goto-address-mode faces
 =================================
@@ -1094,7 +1088,7 @@ addresses stand out more, due to the use of the uncommon ‘@’ caharacter
 but also because they are often enclosed in angled brackets).
 
 
-File: docJUqZMp.info,  Node: Faces defined by the Standard themes,  Next: Supported packages or face groups,  Prev: Do-It-Yourself customizations,  Up: Top
+File: doc5gZhQH.info,  Node: Faces defined by the Standard themes,  Next: Supported packages or face groups,  Prev: Do-It-Yourself customizations,  Up: Top
 
 9 Faces defined by the Standard themes
 **************************************
@@ -1153,7 +1147,7 @@ packages, like Dired, Trashed, Ibuffer.
    • ‘standard-themes-underline-warning’
 
 
-File: docJUqZMp.info,  Node: Supported packages or face groups,  Next: Acknowledgements,  Prev: Faces defined by the Standard themes,  Up: Top
+File: doc5gZhQH.info,  Node: Supported packages or face groups,  Next: Acknowledgements,  Prev: Faces defined by the Standard themes,  Up: Top
 
 10 Supported packages or face groups
 ************************************
@@ -1170,7 +1164,7 @@ already covers everything most users need.
 * Packages that are hard to support::
 
 
-File: docJUqZMp.info,  Node: Explicitly supported packages or face groups,  Next: Implicitly supported packages or face groups,  Up: Supported packages or face groups
+File: doc5gZhQH.info,  Node: Explicitly supported packages or face groups,  Next: Implicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.1 Explicitly supported packages or face groups
 =================================================
@@ -1232,7 +1226,7 @@ File: docJUqZMp.info,  Node: Explicitly supported packages or face groups,  Next
    • isearch, occur, query-replace
    • jit-spell
    • keycast
-   • lin [ Part of 2.2.0-dev.  ]
+   • lin
    • line numbers (‘display-line-numbers-mode’ and global variant)
    • magit
    • man
@@ -1257,7 +1251,7 @@ File: docJUqZMp.info,  Node: Explicitly supported packages or face groups,  Next
    • package (‘M-x list-packages’)
    • perspective
    • powerline
-   • pulsar [ Part of 2.2.0-dev.  ]
+   • pulsar
    • pulse
    • rainbow-delimiters
    • rcirc
@@ -1290,7 +1284,7 @@ File: docJUqZMp.info,  Node: Explicitly supported packages or face groups,  Next
    • ztree
 
 
-File: docJUqZMp.info,  Node: Implicitly supported packages or face groups,  Next: Packages that are hard to support,  Prev: Explicitly supported packages or face groups,  Up: Supported packages or face groups
+File: doc5gZhQH.info,  Node: Implicitly supported packages or face groups,  Next: Packages that are hard to support,  Prev: Explicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.2 Implicitly supported packages or face groups
 =================================================
@@ -1314,7 +1308,7 @@ in perfectly.  If there are refinements we need to made, then we need to
 intervene (*note Explicitly supported packages or face groups::).
 
 
-File: docJUqZMp.info,  Node: Packages that are hard to support,  Prev: Implicitly supported packages or face groups,  Up: Supported packages or face groups
+File: doc5gZhQH.info,  Node: Packages that are hard to support,  Prev: Implicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.3 Packages that are hard to support
 ======================================
@@ -1382,7 +1376,7 @@ web-mode
    The above list is non-exhaustive though you get the idea.
 
 
-File: docJUqZMp.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Supported packages or face groups,  Up: Top
+File: doc5gZhQH.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Supported packages or face groups,  Up: Top
 
 11 Acknowledgements
 *******************
@@ -1401,7 +1395,7 @@ Ideas and/or user feedback
      Weinberg.
 
 
-File: docJUqZMp.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: doc5gZhQH.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 12 GNU Free Documentation License
 *********************************
@@ -1883,7 +1877,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docJUqZMp.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: doc5gZhQH.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 13 Indices
 **********
@@ -1895,7 +1889,7 @@ File: docJUqZMp.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up
 * Concept index::
 
 
-File: docJUqZMp.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: doc5gZhQH.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 13.1 Function index
 ===================
@@ -1917,7 +1911,7 @@ File: docJUqZMp.info,  Node: Function index,  Next: Variable index,  Up: Indices
                                                                (line  6)
 
 
-File: docJUqZMp.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: doc5gZhQH.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 13.2 Variable index
 ===================
@@ -1940,14 +1934,14 @@ File: docJUqZMp.info,  Node: Variable index,  Next: Concept index,  Prev: Functi
 * standard-themes-prompts:               Option for command prompts.
                                                                (line  6)
 * standard-themes-to-rotate:             Option for themes to rotate.
-                                                               (line  8)
+                                                               (line  6)
 * standard-themes-to-toggle:             Option for themes to toggle.
-                                                               (line  8)
+                                                               (line  6)
 * standard-themes-variable-pitch-ui:     Option to control the UI typeface.
                                                                (line  6)
 
 
-File: docJUqZMp.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: doc5gZhQH.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 13.3 Concept index
 ==================
@@ -1974,36 +1968,36 @@ Node: Sample configuration6461
 Node: Customization options8314
 Node: Option to disable other themes9070
 Node: Option for themes to toggle10153
-Node: Option for themes to rotate10633
-Node: Option to enable mixed fonts11036
-Node: Option to control the UI typeface12581
-Node: Option to enable more bold constructs13622
-Node: Option to enable more italic constructs14200
-Node: Option for command prompts14790
-Node: Option for headings16669
-Node: Palette overrides21023
-Node: Loading a theme23802
-Node: Preview theme colors25238
-Node: Use colors from the active Standard theme26804
-Node: Do-It-Yourself customizations28027
-Node: Get a single color from the palette28728
-Node: The general approach to advanced DIY changes30801
-Node: A theme-agnostic hook for theme loading35244
-Node: Add support for hl-todo37827
-Node: Configure bold and italic faces39769
-Node: Tweak org-modern timestamps42177
-Node: Tweak goto-address-mode faces43599
-Node: Faces defined by the Standard themes44700
-Node: Supported packages or face groups47098
-Node: Explicitly supported packages or face groups47722
-Node: Implicitly supported packages or face groups50239
-Node: Packages that are hard to support51084
-Node: Acknowledgements53227
-Node: GNU Free Documentation License53693
-Node: Indices79038
-Node: Function index79216
-Node: Variable index80246
-Node: Concept index81896
+Node: Option for themes to rotate10605
+Node: Option to enable mixed fonts10980
+Node: Option to control the UI typeface12525
+Node: Option to enable more bold constructs13566
+Node: Option to enable more italic constructs14144
+Node: Option for command prompts14734
+Node: Option for headings16613
+Node: Palette overrides20967
+Node: Loading a theme23746
+Node: Preview theme colors25182
+Node: Use colors from the active Standard theme26748
+Node: Do-It-Yourself customizations27971
+Node: Get a single color from the palette28672
+Node: The general approach to advanced DIY changes30745
+Node: A theme-agnostic hook for theme loading35188
+Node: Add support for hl-todo37771
+Node: Configure bold and italic faces39713
+Node: Tweak org-modern timestamps42121
+Node: Tweak goto-address-mode faces43543
+Node: Faces defined by the Standard themes44644
+Node: Supported packages or face groups47042
+Node: Explicitly supported packages or face groups47666
+Node: Implicitly supported packages or face groups50135
+Node: Packages that are hard to support50980
+Node: Acknowledgements53123
+Node: GNU Free Documentation License53589
+Node: Indices78934
+Node: Function index79112
+Node: Variable index80142
+Node: Concept index81792
 
 End Tag Table
 
