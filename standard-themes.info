@@ -1,7 +1,7 @@
-This is docYKmr2K.info, produced by makeinfo version 6.8 from
+This is docqvRkJ7.info, produced by makeinfo version 6.8 from
 standard-themes.texi.
 
-Copyright (C) 2022-2023 Free Software Foundation, Inc.
+Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -20,12 +20,12 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docYKmr2K.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
+File: docqvRkJ7.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
 
 standard-themes: Like the default theme but more consistent
 ***********************************************************
 
-Copyright (C) 2022-2023 Free Software Foundation, Inc.
+Copyright (C) 2022-2025 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -125,7 +125,7 @@ Indices
 
 
 
-File: docYKmr2K.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
+File: docqvRkJ7.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
 
 1 About the Standard themes
 ***************************
@@ -140,7 +140,7 @@ extensibility.  Other themes are stylistic variations of those.
 Derivatives but the Affectionately Reimagined Default ... themes.
 
 
-File: docYKmr2K.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
+File: docqvRkJ7.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
 
 2 Installation
 **************
@@ -151,7 +151,7 @@ File: docYKmr2K.info,  Node: Installation,  Next: Sample configuration,  Prev: A
 * Manual installation::
 
 
-File: docYKmr2K.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docqvRkJ7.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -170,7 +170,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docYKmr2K.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docqvRkJ7.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -197,7 +197,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docYKmr2K.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
+File: docqvRkJ7.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -240,7 +240,7 @@ File: docYKmr2K.info,  Node: Sample configuration,  Next: Customization options,
      (define-key global-map (kbd "M-<f5>") #'standard-themes-rotate)
 
 
-File: docYKmr2K.info,  Node: Customization options,  Next: Loading a theme,  Prev: Sample configuration,  Up: Top
+File: docqvRkJ7.info,  Node: Customization options,  Next: Loading a theme,  Prev: Sample configuration,  Up: Top
 
 4 Customization options
 ***********************
@@ -264,7 +264,7 @@ theme.  Any change after the theme has been loaded requires a re-load
 * Palette overrides::
 
 
-File: docYKmr2K.info,  Node: Option to disable other themes,  Next: Option for themes to toggle,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option to disable other themes,  Next: Option for themes to toggle,  Up: Customization options
 
 4.1 Option to disable other themes
 ==================================
@@ -289,7 +289,7 @@ customizations.  Users who use such customization bundles must set this
 variable to a nil value.
 
 
-File: docYKmr2K.info,  Node: Option for themes to toggle,  Next: Option for themes to rotate,  Prev: Option to disable other themes,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option for themes to toggle,  Next: Option for themes to rotate,  Prev: Option to disable other themes,  Up: Customization options
 
 4.2 Option for themes to toggle
 ===============================
@@ -301,7 +301,7 @@ to switch between when using the command ‘standard-themes-toggle’.
 ignored.
 
 
-File: docYKmr2K.info,  Node: Option for themes to rotate,  Next: Option to enable mixed fonts,  Prev: Option for themes to toggle,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option for themes to rotate,  Next: Option to enable mixed fonts,  Prev: Option for themes to toggle,  Up: Customization options
 
 4.3 Option for themes to rotate
 ===============================
@@ -310,7 +310,7 @@ The user option ‘standard-themes-to-rotate’ is a list of Standard themes
 to switch between when using the command ‘standard-themes-rotate’.
 
 
-File: docYKmr2K.info,  Node: Option to enable mixed fonts,  Next: Option to control the UI typeface,  Prev: Option for themes to rotate,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option to enable mixed fonts,  Next: Option to control the UI typeface,  Prev: Option for themes to rotate,  Up: Customization options
 
 4.4 Option to enable mixed fonts
 ================================
@@ -341,7 +341,7 @@ family of the ‘fixed-pitch’ and ‘variable-pitch’ faces.  The ‘fontaine
 package on GNU ELPA (by Protesilaos) can be helpful in this regard.
 
 
-File: docYKmr2K.info,  Node: Option to control the UI typeface,  Next: Option to enable more bold constructs,  Prev: Option to enable mixed fonts,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option to control the UI typeface,  Next: Option to enable more bold constructs,  Prev: Option to enable mixed fonts,  Up: Customization options
 
 4.5 Option to control the UI typeface
 =====================================
@@ -366,7 +366,7 @@ family of the ‘fixed-pitch’ and ‘variable-pitch’ faces.  The ‘fontaine
 package on GNU ELPA (by Protesilaos) can be helpful in this regard.
 
 
-File: docYKmr2K.info,  Node: Option to enable more bold constructs,  Next: Option to enable more italic constructs,  Prev: Option to control the UI typeface,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option to enable more bold constructs,  Next: Option to enable more italic constructs,  Prev: Option to control the UI typeface,  Up: Customization options
 
 4.6 Option to enable more bold constructs
 =========================================
@@ -379,7 +379,7 @@ builtins, and a few other elements.
    *note Configure bold and italic faces::.
 
 
-File: docYKmr2K.info,  Node: Option to enable more italic constructs,  Next: Option for command prompts,  Prev: Option to enable more bold constructs,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option to enable more italic constructs,  Next: Option for command prompts,  Prev: Option to enable more bold constructs,  Up: Customization options
 
 4.7 Option to enable more italic constructs
 ===========================================
@@ -392,7 +392,7 @@ comments, doc strings, and a few other minor elements.
    *note Configure bold and italic faces::.
 
 
-File: docYKmr2K.info,  Node: Option for command prompts,  Next: Option for headings,  Prev: Option to enable more italic constructs,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option for command prompts,  Next: Option for headings,  Prev: Option to enable more italic constructs,  Up: Customization options
 
 4.8 Option for command prompts
 ==============================
@@ -446,7 +446,7 @@ in these examples:
 applying palette overrides (*note Palette overrides::).
 
 
-File: docYKmr2K.info,  Node: Option for headings,  Next: Palette overrides,  Prev: Option for command prompts,  Up: Customization options
+File: docqvRkJ7.info,  Node: Option for headings,  Next: Palette overrides,  Prev: Option for command prompts,  Up: Customization options
 
 4.9 Option for headings
 =======================
@@ -555,7 +555,7 @@ done in older versions of the themes).
 modified by applying palette overrides (*note Palette overrides::).
 
 
-File: docYKmr2K.info,  Node: Palette overrides,  Prev: Option for headings,  Up: Customization options
+File: docqvRkJ7.info,  Node: Palette overrides,  Prev: Option for headings,  Up: Customization options
 
 4.10 Palette overrides
 ======================
@@ -621,7 +621,7 @@ is the override and the second is the original one.
    Contact me if you need further help with this.
 
 
-File: docYKmr2K.info,  Node: Loading a theme,  Next: Preview theme colors,  Prev: Customization options,  Up: Top
+File: docqvRkJ7.info,  Node: Loading a theme,  Next: Preview theme colors,  Prev: Customization options,  Up: Top
 
 5 Loading a theme
 *****************
@@ -654,7 +654,7 @@ approach to advanced DIY changes.).  These two functions are also called
 by the command ‘standard-themes-toggle’.
 
 
-File: docYKmr2K.info,  Node: Preview theme colors,  Next: Use colors from the active Standard theme,  Prev: Loading a theme,  Up: Top
+File: docqvRkJ7.info,  Node: Preview theme colors,  Next: Use colors from the active Standard theme,  Prev: Loading a theme,  Up: Top
 
 6 Preview theme colors
 **********************
@@ -690,7 +690,7 @@ colors and ‘=*standard-light-list-mappings*’ for the semantic color
 mappings.
 
 
-File: docYKmr2K.info,  Node: Use colors from the active Standard theme,  Next: Do-It-Yourself customizations,  Prev: Preview theme colors,  Up: Top
+File: docqvRkJ7.info,  Node: Use colors from the active Standard theme,  Next: Do-It-Yourself customizations,  Prev: Preview theme colors,  Up: Top
 
 7 Use colors from the active Standard theme
 *******************************************
@@ -719,7 +719,7 @@ or color mapping are still possible.  At any rate, we will not outright
 break any code that uses ‘standard-themes-with-colors’.
 
 
-File: docYKmr2K.info,  Node: Do-It-Yourself customizations,  Next: Faces defined by the Standard themes,  Prev: Use colors from the active Standard theme,  Up: Top
+File: docqvRkJ7.info,  Node: Do-It-Yourself customizations,  Next: Faces defined by the Standard themes,  Prev: Use colors from the active Standard theme,  Up: Top
 
 8 Do-It-Yourself customizations
 *******************************
@@ -739,7 +739,7 @@ liking, often by employing the ‘standard-themes-with-colors’ macro
 * Tweak goto-address-mode faces::
 
 
-File: docYKmr2K.info,  Node: Get a single color from the palette,  Next: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: Get a single color from the palette,  Next: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
 
 8.1 Get a single color from the palette
 =======================================
@@ -793,7 +793,7 @@ with/without overrides and when recursive mappings are introduced.
      ;; => "#b3303a"
 
 
-File: docYKmr2K.info,  Node: The general approach to advanced DIY changes,  Next: A theme-agnostic hook for theme loading,  Prev: Get a single color from the palette,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: The general approach to advanced DIY changes,  Next: A theme-agnostic hook for theme loading,  Prev: Get a single color from the palette,  Up: Do-It-Yourself customizations
 
 8.2 The general approach to advanced DIY changes
 ================================================
@@ -884,7 +884,7 @@ mechanism.  We are willing to help and shall provide comprehensive
 documentation where necessary.
 
 
-File: docYKmr2K.info,  Node: A theme-agnostic hook for theme loading,  Next: Add support for hl-todo,  Prev: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: A theme-agnostic hook for theme loading,  Next: Add support for hl-todo,  Prev: The general approach to advanced DIY changes,  Up: Do-It-Yourself customizations
 
 8.3 A theme-agnostic hook for theme loading
 ===========================================
@@ -936,7 +936,7 @@ though the user can replace it with ‘after-enable-theme-hook’ should
 they need to (provided they understand the implications).
 
 
-File: docYKmr2K.info,  Node: Add support for hl-todo,  Next: Configure bold and italic faces,  Prev: A theme-agnostic hook for theme loading,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: Add support for hl-todo,  Next: Configure bold and italic faces,  Prev: A theme-agnostic hook for theme loading,  Up: Do-It-Yourself customizations
 
 8.4 Add support for hl-todo
 ===========================
@@ -980,7 +980,7 @@ the latter method.
 commands for previewing the palette (*note Preview theme colors::).
 
 
-File: docYKmr2K.info,  Node: Configure bold and italic faces,  Next: Tweak org-modern timestamps,  Prev: Add support for hl-todo,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: Configure bold and italic faces,  Next: Tweak org-modern timestamps,  Prev: Add support for hl-todo,  Up: Do-It-Yourself customizations
 
 8.5 Configure bold and italic faces
 ===================================
@@ -1032,7 +1032,7 @@ pick fonts that work in tandem):
 provides the means to configure font families via faces.
 
 
-File: docYKmr2K.info,  Node: Tweak org-modern timestamps,  Next: Tweak goto-address-mode faces,  Prev: Configure bold and italic faces,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: Tweak org-modern timestamps,  Next: Tweak goto-address-mode faces,  Prev: Configure bold and italic faces,  Up: Do-It-Yourself customizations
 
 8.6 Tweak ‘org-modern’ timestamps
 =================================
@@ -1063,7 +1063,7 @@ fonts.).
    For any further issues, you are welcome to ask for help.
 
 
-File: docYKmr2K.info,  Node: Tweak goto-address-mode faces,  Prev: Tweak org-modern timestamps,  Up: Do-It-Yourself customizations
+File: docqvRkJ7.info,  Node: Tweak goto-address-mode faces,  Prev: Tweak org-modern timestamps,  Up: Do-It-Yourself customizations
 
 8.7 Tweak goto-address-mode faces
 =================================
@@ -1088,7 +1088,7 @@ addresses stand out more, due to the use of the uncommon ‘@’ caharacter
 but also because they are often enclosed in angled brackets).
 
 
-File: docYKmr2K.info,  Node: Faces defined by the Standard themes,  Next: Supported packages or face groups,  Prev: Do-It-Yourself customizations,  Up: Top
+File: docqvRkJ7.info,  Node: Faces defined by the Standard themes,  Next: Supported packages or face groups,  Prev: Do-It-Yourself customizations,  Up: Top
 
 9 Faces defined by the Standard themes
 **************************************
@@ -1147,7 +1147,7 @@ packages, like Dired, Trashed, Ibuffer.
    • ‘standard-themes-underline-warning’
 
 
-File: docYKmr2K.info,  Node: Supported packages or face groups,  Next: Acknowledgements,  Prev: Faces defined by the Standard themes,  Up: Top
+File: docqvRkJ7.info,  Node: Supported packages or face groups,  Next: Acknowledgements,  Prev: Faces defined by the Standard themes,  Up: Top
 
 10 Supported packages or face groups
 ************************************
@@ -1164,7 +1164,7 @@ already covers everything most users need.
 * Packages that are hard to support::
 
 
-File: docYKmr2K.info,  Node: Explicitly supported packages or face groups,  Next: Implicitly supported packages or face groups,  Up: Supported packages or face groups
+File: docqvRkJ7.info,  Node: Explicitly supported packages or face groups,  Next: Implicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.1 Explicitly supported packages or face groups
 =================================================
@@ -1262,6 +1262,7 @@ File: docYKmr2K.info,  Node: Explicitly supported packages or face groups,  Next
    • show-paren-mode
    • shr
    • smerge
+   • spacious-padding [ Part of 2.3.0-dev.  ]
    • tab-bar-mode
    • tab-line-mode
    • tempel
@@ -1284,7 +1285,7 @@ File: docYKmr2K.info,  Node: Explicitly supported packages or face groups,  Next
    • ztree
 
 
-File: docYKmr2K.info,  Node: Implicitly supported packages or face groups,  Next: Packages that are hard to support,  Prev: Explicitly supported packages or face groups,  Up: Supported packages or face groups
+File: docqvRkJ7.info,  Node: Implicitly supported packages or face groups,  Next: Packages that are hard to support,  Prev: Explicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.2 Implicitly supported packages or face groups
 =================================================
@@ -1308,7 +1309,7 @@ in perfectly.  If there are refinements we need to made, then we need to
 intervene (*note Explicitly supported packages or face groups::).
 
 
-File: docYKmr2K.info,  Node: Packages that are hard to support,  Prev: Implicitly supported packages or face groups,  Up: Supported packages or face groups
+File: docqvRkJ7.info,  Node: Packages that are hard to support,  Prev: Implicitly supported packages or face groups,  Up: Supported packages or face groups
 
 10.3 Packages that are hard to support
 ======================================
@@ -1376,7 +1377,7 @@ web-mode
    The above list is non-exhaustive though you get the idea.
 
 
-File: docYKmr2K.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Supported packages or face groups,  Up: Top
+File: docqvRkJ7.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Supported packages or face groups,  Up: Top
 
 11 Acknowledgements
 *******************
@@ -1395,7 +1396,7 @@ Ideas and/or user feedback
      Weinberg.
 
 
-File: docYKmr2K.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docqvRkJ7.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 12 GNU Free Documentation License
 *********************************
@@ -1877,7 +1878,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docYKmr2K.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docqvRkJ7.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 13 Indices
 **********
@@ -1889,7 +1890,7 @@ File: docYKmr2K.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up
 * Concept index::
 
 
-File: docYKmr2K.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docqvRkJ7.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 13.1 Function index
 ===================
@@ -1911,7 +1912,7 @@ File: docYKmr2K.info,  Node: Function index,  Next: Variable index,  Up: Indices
                                                                (line  6)
 
 
-File: docYKmr2K.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docqvRkJ7.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 13.2 Variable index
 ===================
@@ -1941,7 +1942,7 @@ File: docYKmr2K.info,  Node: Variable index,  Next: Concept index,  Prev: Functi
                                                                (line  6)
 
 
-File: docYKmr2K.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docqvRkJ7.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 13.3 Concept index
 ==================
@@ -1990,14 +1991,14 @@ Node: Tweak goto-address-mode faces43543
 Node: Faces defined by the Standard themes44644
 Node: Supported packages or face groups47042
 Node: Explicitly supported packages or face groups47666
-Node: Implicitly supported packages or face groups50135
-Node: Packages that are hard to support50980
-Node: Acknowledgements53123
-Node: GNU Free Documentation License53589
-Node: Indices78934
-Node: Function index79112
-Node: Variable index80142
-Node: Concept index81792
+Node: Implicitly supported packages or face groups50183
+Node: Packages that are hard to support51028
+Node: Acknowledgements53171
+Node: GNU Free Documentation License53637
+Node: Indices78982
+Node: Function index79160
+Node: Variable index80190
+Node: Concept index81840
 
 End Tag Table
 
