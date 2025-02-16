@@ -1217,6 +1217,7 @@ Table of Contents
   • git-rebase
   • gnus
   • hi-lock (`M-x highlight-regexp')
+  • howm [ Part of 2.3.0-dev. ]
   • ibuffer
   • image-dired
   • info

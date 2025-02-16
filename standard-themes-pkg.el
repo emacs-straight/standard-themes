@@ -1,2 +1,2 @@
-;; Generated package description from standard-themes.el  -*- no-byte-compile: t -*-
-(define-package "standard-themes" "2.2.0.0.20250212.62806" "Like the default theme but more consistent" '((emacs "28.1")) :commit "63801e4ad3980c0b6ab29a3adeb3574c8a6c6487" :authors '(("Protesilaos Stavrou" . "info@protesilaos.com")) :maintainer '("Protesilaos Stavrou" . "info@protesilaos.com") :keywords '("faces" "theme" "accessibility") :url "https://github.com/protesilaos/standard-themes")
+;; Generated package description from standard-themes.el  -*- mode: lisp-data; no-byte-compile: t -*-
+(define-package "standard-themes" "2.2.0.0.20250215.140613" "Like the default theme but more consistent" '((emacs "28.1")) :commit "3b27e404710aa10c4e07acb312c3c94ce528c638" :authors '(("Protesilaos Stavrou" . "info@protesilaos.com")) :maintainer '("Protesilaos Stavrou" . "info@protesilaos.com") :keywords '("faces" "theme" "accessibility") :url "https://github.com/protesilaos/standard-themes")
