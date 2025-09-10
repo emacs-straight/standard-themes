@@ -1084,7 +1084,10 @@ color mappings instead of the complete palette."
     `(bookmark-menu-bookmark ((,c :inherit bold)))
 ;;;; calendar and diary
     `(calendar-month-header ((,c :inherit bold)))
-    `(calendar-today ((,c :inherit bold :underline t)))
+    `(calendar-today
+      ((default :foreground ,date-common :inverse-video t)
+       (((supports :box t))
+        :box (:line-width (-1 . -1) :color ,fg-main))))
     `(calendar-weekday-header ((,c :foreground ,date-weekday)))
     `(calendar-weekend-header ((,c :foreground ,date-weekend)))
     `(diary ((,c :background ,bg-dim :foreground ,accent-0)))
@@ -1962,7 +1965,7 @@ color mappings instead of the complete palette."
     `(org-column ((,c :inherit default :background ,bg-alt)))
     `(org-column-title ((,c :inherit (standard-themes-fixed-pitch bold default) :underline t :background ,bg-alt)))
     `(org-date ((,c :inherit standard-themes-fixed-pitch :foreground ,date-common :underline t)))
-    `(org-date-selected ((,c :foreground ,date-common :inverse-video t)))
+    `(org-date-selected ((,c :inherit calendar-today)))
     `(org-document-info ((,c :foreground ,rainbow-1)))
     `(org-document-info-keyword ((,c :inherit (standard-themes-fixed-pitch shadow))))
     `(org-document-title ((,c :inherit standard-themes-heading-0)))
