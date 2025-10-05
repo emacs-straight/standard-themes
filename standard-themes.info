@@ -1,4 +1,4 @@
-This is docUyU6d2.info, produced by makeinfo version 6.8 from
+This is doctRzQL8.info, produced by makeinfo version 6.8 from
 standard-themes.texi.
 
 Copyright (C) 2022-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docUyU6d2.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
+File: doctRzQL8.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
 
 standard-themes: Like the default theme but more consistent
 ***********************************************************
@@ -90,7 +90,7 @@ Indices
 
 
 
-File: docUyU6d2.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
+File: doctRzQL8.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
 
 1 About the Standard themes
 ***************************
@@ -113,7 +113,7 @@ arrangement (or enable ‘modus-themes-include-derivatives-mode’ instead
 to blend Standard and Modus into one collection).
 
 
-File: docUyU6d2.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
+File: doctRzQL8.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
 
 2 Installation
 **************
@@ -124,7 +124,7 @@ File: docUyU6d2.info,  Node: Installation,  Next: Sample configuration,  Prev: A
 * Manual installation::
 
 
-File: docUyU6d2.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: doctRzQL8.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -143,7 +143,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docUyU6d2.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: doctRzQL8.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -170,7 +170,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docUyU6d2.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
+File: doctRzQL8.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -209,7 +209,7 @@ Modus into one collection).
        (modus-themes-load-theme 'standard-light-tinted))
 
 
-File: docUyU6d2.info,  Node: Customization options,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
+File: doctRzQL8.info,  Node: Customization options,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
 
 4 Customization options
 ***********************
@@ -221,7 +221,7 @@ customisation is done via the ‘modus-themes’.  Consult the latter’s
 manual for all the technicalities (*note Sample configuration::).
 
 
-File: docUyU6d2.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Customization options,  Up: Top
+File: doctRzQL8.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Customization options,  Up: Top
 
 5 Acknowledgements
 ******************
@@ -240,7 +240,7 @@ Ideas and/or user feedback
      Horn, Zack Weinberg.
 
 
-File: docUyU6d2.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: doctRzQL8.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 6 GNU Free Documentation License
 ********************************
@@ -722,7 +722,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docUyU6d2.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: doctRzQL8.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 7 Indices
 *********
@@ -734,19 +734,19 @@ File: docUyU6d2.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up
 * Concept index::
 
 
-File: docUyU6d2.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: doctRzQL8.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 7.1 Function index
 ==================
 
 
-File: docUyU6d2.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: doctRzQL8.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 7.2 Variable index
 ==================
 
 
-File: docUyU6d2.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: doctRzQL8.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 7.3 Concept index
 =================

@@ -110,12 +110,17 @@ if you prefer to blend Standard and Modus into a single group, enable
     (rainbow-7 blue-faint)
     (rainbow-8 magenta-warmer)
 
+    (bg-tab-bar bg-alt)
+    (bg-tab-current bg-main)
+    (bg-tab-other bg-active)
+
     (bg-space unspecified)
     (fg-space border)
     (bg-space-err bg-red-intense)
 
     (bg-search-current bg-magenta-intense)
     (bg-search-lazy bg-cyan-intense)
+    (bg-search-static bg-yellow-subtle)
     (bg-search-replace bg-red-intense)
 
     (bg-search-rx-group-0 bg-blue-intense)
