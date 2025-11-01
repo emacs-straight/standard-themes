@@ -50,7 +50,7 @@
      (bg-dim      "#2e3355")
      (fg-dim      "#a6a6a6")
      (bg-alt      "#3f4560")
-     (fg-alt      "#80c8d2")
+     (fg-alt      "#ac90e0")
      (bg-active   "#5f6580")
      (bg-inactive "#203348")
      (border      "#707090")
@@ -198,12 +198,14 @@
      (comment red-warmer)
      (constant cyan-cooler)
      (fnname cyan-warmer)
+     (fnname-call cyan-faint)
      (keyword cyan)
      (preprocessor blue-faint)
      (docstring yellow-cooler)
      (string yellow-cooler)
      (type green-cooler)
      (variable yellow)
+     (variable-use yellow-faint)
      (rx-escape green) ; compare with `string'
      (rx-construct fg-main)
 
@@ -272,7 +274,7 @@ represents."
  'standard-themes
  "Night sky variant of standard-dark theme."
  'dark
- 'modus-themes-vivendi-tinted-palette
+ 'modus-vivendi-tinted-palette
  'standard-dark-tinted-palette
  'standard-dark-tinted-palette-overrides
  'standard-themes-custom-faces)
