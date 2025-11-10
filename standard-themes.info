@@ -1,4 +1,4 @@
-This is docNcvvDe.info, produced by makeinfo version 6.8 from
+This is doccqG32m.info, produced by makeinfo version 6.8 from
 standard-themes.texi.
 
 Copyright (C) 2022-2025 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: docNcvvDe.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
+File: doccqG32m.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
 
 standard-themes: Like the default theme but more consistent
 ***********************************************************
@@ -43,11 +43,11 @@ package called ‘standard-themes’, and provides every other piece of
 information pertinent to it.
 
    The documentation furnished herein corresponds to stable version
-2.2.0, released on 2024-12-29.  Any reference to a newer feature which
+3.0.0, released on 2025-11-09.  Any reference to a newer feature which
 does not yet form part of the latest tagged commit, is explicitly marked
 as such.
 
-   Current development target is 3.0.0-dev.
+   Current development target is 3.1.0-dev.
 
    • Package name (GNU ELPA): ‘standard-themes’
    • Official manual: <https://protesilaos.com/emacs/standard-themes>
@@ -70,7 +70,7 @@ of it.
 * About the Standard themes::
 * Installation::
 * Sample configuration::
-* Customization options::
+* Working with other Modus themes or taking over Modus::
 * Acknowledgements::
 * GNU Free Documentation License::
 * Indices::
@@ -82,6 +82,13 @@ Installation
 * GNU ELPA package::
 * Manual installation::
 
+Working with other Modus themes or taking over Modus
+
+* Loading only Standard themes with the convenience wrappers we provide::
+* Combining core Modus themes with all their derivatives::
+* Taking over the Modus commands altogether::
+* Customisation options for compatibility with Modus::
+
 Indices
 
 * Function index::
@@ -90,7 +97,7 @@ Indices
 
 
 
-File: docNcvvDe.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
+File: doccqG32m.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
 
 1 About the Standard themes
 ***************************
@@ -113,7 +120,7 @@ arrangement (or enable ‘modus-themes-include-derivatives-mode’ instead
 to blend Standard and Modus into one collection).
 
 
-File: docNcvvDe.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
+File: doccqG32m.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
 
 2 Installation
 **************
@@ -124,7 +131,7 @@ File: docNcvvDe.info,  Node: Installation,  Next: Sample configuration,  Prev: A
 * Manual installation::
 
 
-File: docNcvvDe.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: doccqG32m.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -143,7 +150,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: docNcvvDe.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: doccqG32m.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -170,29 +177,29 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: docNcvvDe.info,  Node: Sample configuration,  Next: Customization options,  Prev: Installation,  Up: Top
+File: doccqG32m.info,  Node: Sample configuration,  Next: Working with other Modus themes or taking over Modus,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
 
-[ Updated as part of 3.0.0-dev, to build on top of the ‘modus-themes’.
-]
-
-   Starting with version ‘3.0.0’, the ‘standard-themes’ are built on top
-of the ‘modus-themes’.  This means that all customisation options of the
-Modus themes apply to the Standard themes.  Same for all Modus commands
-that load a theme.  Enable ‘standard-themes-take-over-modus-themes-mode’
-to set up this arrangement (or enable
-‘modus-themes-include-derivatives-mode’ instead to blend Standard and
-Modus into one collection).
+Starting with version ‘3.0.0’, the ‘standard-themes’ are built on top of
+the ‘modus-themes’.  This means that all customisation is done via the
+Modus user options (*note Customisation options: Customisation options
+for compatibility with Modus.).  Furthermore, all theme-loading commands
+are those of Modus (*note Working with other Modus themes or taking over
+Modus::).
 
      (use-package standard-themes
        :ensure t
        :init
-       ;; This makes the Modus commands listed below consider only the
-       ;; Standard themes.  For an alternative that includes Modus and all
-       ;; derivative themes (like Standard), enable the
-       ;; `modus-themes-include-derivatives-mode' instead.
+       ;; This makes the Modus commands listed below consider only the Ef
+       ;; themes.  For an alternative that includes Modus and all
+       ;; derivative themes (like Ef), enable the
+       ;; `modus-themes-include-derivatives-mode' instead.  The manual of
+       ;; the Ef themes has a section that explains all the possibilities:
+       ;;
+       ;; - Evaluate `(info "(standard-themes) Working with other Modus themes or taking over Modus")'
+       ;; - Visit <https://protesilaos.com/emacs/standard-themes#h:d8ebe175-cd61-4e0b-9b84-7a4f5c7e09cd>
        (standard-themes-take-over-modus-themes-mode 1)
        :bind
        (("<f5>" . modus-themes-rotate)
@@ -209,19 +216,152 @@ Modus into one collection).
        (modus-themes-load-theme 'standard-light-tinted))
 
 
-File: docNcvvDe.info,  Node: Customization options,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
+File: doccqG32m.info,  Node: Working with other Modus themes or taking over Modus,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
 
-4 Customization options
-***********************
+4 Working with other Modus themes or taking over Modus
+******************************************************
 
-[ Redone as part of 3.0.0-dev.  ]
+Starting version ‘3.0.0’, the Standard themes are built on top of the
+Modus themes.  This means that they inherit the comprehensive
+infrastructure of Modus and all of its wide face/package coverage.  To
+make the change easier for existing users, we provide aliases for user
+options and commands.
 
-   Starting with version ‘3.0.0’ of the ‘standard-themes’, all
-customisation is done via the ‘modus-themes’.  Consult the latter’s
-manual for all the technicalities (*note Sample configuration::).
+* Menu:
+
+* Loading only Standard themes with the convenience wrappers we provide::
+* Combining core Modus themes with all their derivatives::
+* Taking over the Modus commands altogether::
+* Customisation options for compatibility with Modus::
 
 
-File: docNcvvDe.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Customization options,  Up: Top
+File: doccqG32m.info,  Node: Loading only Standard themes with the convenience wrappers we provide,  Next: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
+
+4.1 Loading only Standard themes with the convenience wrappers we provide
+=========================================================================
+
+All the old commands Standard provided for loading one of its themes
+will still work as before, meaning that they will only ever show and
+load a theme that belongs to the Standard collection (*note Combining
+core Modus themes with all their derivatives::).
+
+   Internally, these commands are now using the Modus infrastructure and
+are then limiting the set of themes to the Standard collection.  They
+are thus convenience wrappers around the equivalent Modus commands.
+
+   • ‘standard-themes-toggle’
+
+   • ‘standard-themes-rotate’
+
+   • ‘standard-themes-select’
+
+   • ‘standard-themes-load-random’
+
+   • ‘standard-themes-load-random-dark’
+
+   • ‘standard-themes-load-random-light’
+
+   Additionally, the commands ‘standard-themes-list-colors’ and
+‘standard-themes-list-colors-current’ use the relevant Modus
+functionality under the hood while working only with Standard themes.
+
+   Depending on their needs, users may prefer to take over Modus
+completely, instead of relying on these convenience wrapper commands
+(*note Taking over the Modus commands altogether::).
+
+
+File: doccqG32m.info,  Node: Combining core Modus themes with all their derivatives,  Next: Taking over the Modus commands altogether,  Prev: Loading only Standard themes with the convenience wrappers we provide,  Up: Working with other Modus themes or taking over Modus
+
+4.2 Combining core Modus themes with all their derivatives
+==========================================================
+
+The minor mode ‘modus-themes-include-derivatives-mode’ makes all the
+theme-loading commands that Modus defines consider all core and
+derivative themes.  This means that something like ‘modus-themes-select’
+will offer ‘modus-operandi’ and ‘ef-summer’ as two of the many possible
+candidates.
+
+   In this scenario, the Modus and Standard collections become part of a
+larger family of themes as opposed to only considering one or the other
+(*note Loading only Standard themes with the convenience wrappers we
+provide::).  Enable ‘modus-themes-include-derivatives-mode’ and then
+access them all with the following commands:
+
+   • ‘modus-themes-toggle’
+
+   • ‘modus-themes-rotate’
+
+   • ‘modus-themes-select’
+
+   • ‘modus-themes-load-random’
+
+   • ‘modus-themes-load-random-dark’
+
+   • ‘modus-themes-load-random-light’
+
+   • ‘modus-themes-list-colors’ (alias ‘modus-themes-preview-colors’)
+
+   • ‘modus-themes-list-colors-current’ (alias
+     ‘modus-themes-preview-colors-current’)
+
+   Consult the manual of the Modus themes for further details and/or
+read the documentation string of each command.
+
+
+File: doccqG32m.info,  Node: Taking over the Modus commands altogether,  Next: Customisation options for compatibility with Modus,  Prev: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
+
+4.3 Taking over the Modus commands altogether
+=============================================
+
+The minor mode ‘standard-themes-take-over-modus-themes-mode’ makes all
+Modus commands that load a theme consider only Standard themes.  This is
+the opposite of allowing different theme collections to be blended
+together (*note Combining core Modus themes with all their
+derivatives::).  It effectively is the same as using one of the
+convenience wrapper commands we already provide (*note Loading only
+Standard themes with the convenience wrappers we provide::).
+
+   This minor mode exists to accommodate the needs of users who install
+both the Modus and Standard theme packages (and possibly other Modus
+derivatives).  They can maintain a single/shared configuration and then
+decide when to enable ‘standard-themes-take-over-modus-themes-mode’ to
+switch to using just the Standard themes.  In this scenario, a key
+binding to, say, ‘modus-themes-rotate’ does not need to be updated: it
+internally reads only Standard themes.  When
+‘standard-themes-take-over-modus-themes-mode’ is disabled, that same key
+binding will revert to doing what it did before (load only a core Modus
+theme or Modus plus derivatives if
+‘modus-themes-include-derivatives-mode’ is enabled).
+
+
+File: doccqG32m.info,  Node: Customisation options for compatibility with Modus,  Prev: Taking over the Modus commands altogether,  Up: Working with other Modus themes or taking over Modus
+
+4.4 Customisation options for compatibility with Modus
+======================================================
+
+Consult the Modus themes manual for all customisation options.  All the
+user options defined by the Standard themes prior to their version
+‘3.0.0’ (i.e.  before building on top of the Modus themes) are now
+aliases for the equivalent Modus options.  We do this for backward
+compatibility.  Concretely:
+
+Old name                                   Is alias for CURRENT NAME
+-----------------------------------------------------------------------------------
+standard-themes-disable-other-themes       modus-themes-disable-other-themes
+standard-themes-to-toggle                  modus-themes-to-toggle
+standard-themes-to-rotate                  modus-themes-to-rotate
+standard-themes-after-load-theme-hook      modus-themes-after-load-theme-hook
+standard-themes-italic-constructs          modus-themes-italic-constructs
+standard-themes-bold-constructs            modus-themes-bold-constructs
+standard-themes-variable-pitch-ui          modus-themes-variable-pitch-ui
+standard-themes-mixed-fonts                modus-themes-mixed-fonts
+standard-themes-headings                   modus-themes-headings
+standard-themes-completions                modus-themes-completions
+standard-themes-prompts                    modus-themes-prompts
+standard-themes-common-palette-overrides   modus-themes-common-palette-overrides
+
+
+File: doccqG32m.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Working with other Modus themes or taking over Modus,  Up: Top
 
 5 Acknowledgements
 ******************
@@ -240,7 +380,7 @@ Ideas and/or user feedback
      Horn, Zack Weinberg.
 
 
-File: docNcvvDe.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: doccqG32m.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 6 GNU Free Documentation License
 ********************************
@@ -722,7 +862,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: docNcvvDe.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: doccqG32m.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 7 Indices
 *********
@@ -734,19 +874,61 @@ File: docNcvvDe.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up
 * Concept index::
 
 
-File: docNcvvDe.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: doccqG32m.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 7.1 Function index
 ==================
 
+ [index ]
+* Menu:
+
+* modus-themes-include-derivatives-mode: Combining core Modus themes with all their derivatives.
+                                                               (line  6)
+* modus-themes-list-colors:              Combining core Modus themes with all their derivatives.
+                                                               (line 30)
+* modus-themes-list-colors-current:      Combining core Modus themes with all their derivatives.
+                                                               (line 32)
+* modus-themes-load-random:              Combining core Modus themes with all their derivatives.
+                                                               (line 24)
+* modus-themes-load-random-dark:         Combining core Modus themes with all their derivatives.
+                                                               (line 26)
+* modus-themes-load-random-light:        Combining core Modus themes with all their derivatives.
+                                                               (line 28)
+* modus-themes-preview-colors:           Combining core Modus themes with all their derivatives.
+                                                               (line 30)
+* modus-themes-rotate:                   Combining core Modus themes with all their derivatives.
+                                                               (line 20)
+* modus-themes-select:                   Combining core Modus themes with all their derivatives.
+                                                               (line 22)
+* modus-themes-toggle:                   Combining core Modus themes with all their derivatives.
+                                                               (line 18)
+* standard-themes-list-colors:           Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 27)
+* standard-themes-list-colors-current:   Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 27)
+* standard-themes-load-random:           Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 21)
+* standard-themes-load-random-dark:      Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 23)
+* standard-themes-load-random-light:     Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 25)
+* standard-themes-rotate:                Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 17)
+* standard-themes-select:                Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 19)
+* standard-themes-take-over-modus-themes-mode: Taking over the Modus commands altogether.
+                                                               (line  6)
+* standard-themes-toggle:                Loading only Standard themes with the convenience wrappers we provide.
+                                                               (line 15)
+
 
-File: docNcvvDe.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: doccqG32m.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 7.2 Variable index
 ==================
 
 
-File: docNcvvDe.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: doccqG32m.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 7.3 Concept index
 =================
@@ -761,18 +943,22 @@ File: docNcvvDe.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 Tag Table:
 Node: Top873
-Node: About the Standard themes3200
-Node: Installation4332
-Node: GNU ELPA package4536
-Node: Manual installation5106
-Node: Sample configuration5911
-Node: Customization options7498
-Node: Acknowledgements7912
-Node: GNU Free Documentation License8389
-Node: Indices33732
-Node: Function index33908
-Node: Variable index34031
-Node: Concept index34176
+Node: About the Standard themes3520
+Node: Installation4652
+Node: GNU ELPA package4856
+Node: Manual installation5426
+Node: Sample configuration6231
+Node: Working with other Modus themes or taking over Modus8003
+Node: Loading only Standard themes with the convenience wrappers we provide8808
+Node: Combining core Modus themes with all their derivatives10291
+Node: Taking over the Modus commands altogether11854
+Node: Customisation options for compatibility with Modus13387
+Node: Acknowledgements15003
+Node: GNU Free Documentation License15511
+Node: Indices40854
+Node: Function index41030
+Node: Variable index44518
+Node: Concept index44663
 
 End Tag Table
 

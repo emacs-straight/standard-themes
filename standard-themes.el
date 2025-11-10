@@ -5,7 +5,7 @@
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/standard-themes
-;; Version: 2.2.0
+;; Version: 3.0.0
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme, accessibility
 
@@ -228,9 +228,6 @@ Alternatively, use the commands `standard-themes-rotate',
 `standard-themes-list-colors', `standard-themes-list-colors-current'.
 They are all designed to only consider Standard themes." our-symbol modus-symbol)))))
 
-;; FIXME 2025-10-07: How best to handle a possible `standard-themes-toggle'?
-;; Should we keep the `standard-themes-to-toggle'? And how about the same
-;; for rotation?
 (defun standard-themes-define-option-aliases ()
   "Define aliases for the user options of the Modus themes."
   (unless standard-themes--aliased-p
@@ -241,6 +238,9 @@ They are all designed to only consider Standard themes." our-symbol modus-symbol
     (setq standard-themes--aliased-p t)))
 
 (standard-themes-define-option-aliases)
+
+(defalias 'standard-themes-load-theme 'modus-themes-load-theme
+  "Alias for `modus-themes-load-theme.")
 
 (defalias 'standard-themes-with-colors 'modus-themes-with-colors
   "Alias for `modus-themes-with-colors.")
@@ -267,6 +267,9 @@ They are all designed to only consider Standard themes."
     standard-themes-items))
 
 ;;;; Convenience commands
+
+;;;###autoload (autoload 'standard-themes-toggle "standard-themes")
+(modus-themes-define-derivative-command standard-themes toggle)
 
 ;;;###autoload (autoload 'standard-themes-rotate "standard-themes")
 (modus-themes-define-derivative-command standard-themes rotate)
