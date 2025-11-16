@@ -5,7 +5,7 @@
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
 ;; URL: https://github.com/protesilaos/standard-themes
-;; Version: 3.0.1
+;; Version: 3.0.2
 ;; Package-Requires: ((emacs "28.1") (modus-themes "5.0.0"))
 ;; Keywords: faces, theme, accessibility
 
@@ -81,6 +81,7 @@ if you prefer to blend Standard and Modus into a single group, enable
 
     (fringe bg-dim)
 
+    (docmarkup constant)
     (property variable)
 
     (date-common cyan-warmer)
@@ -169,6 +170,8 @@ if you prefer to blend Standard and Modus into a single group, enable
 
 (defconst standard-themes-custom-faces
   '(
+    `(company-tooltip ((,c :background ,bg-alt)))
+    `(corfu-default ((,c :background ,bg-alt)))
     `(magit-section-highlight ((,c :background ,bg-alt)))
     `(magit-diff-file-heading-highlight ((,c :inherit magit-diff-file-heading :background ,bg-alt)))
     `(mode-line
