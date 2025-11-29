@@ -128,14 +128,24 @@ if you prefer to blend Standard and Modus into a single group, enable
     (bg-search-static bg-yellow-subtle)
     (bg-search-replace bg-red-intense)
 
+    (fg-search-current fg-main)
+    (fg-search-lazy fg-main)
+    (fg-search-static fg-main)
+    (fg-search-replace fg-main)
+
     (bg-search-rx-group-0 bg-blue-intense)
     (bg-search-rx-group-1 bg-yellow-intense)
     (bg-search-rx-group-2 bg-green-subtle)
     (bg-search-rx-group-3 bg-magenta-subtle)
 
-    (prose-code cyan-cooler)
-    (prose-macro green-warmer)
-    (prose-verbatim magenta-warmer)
+    (fg-search-rx-group-0 fg-main)
+    (fg-search-rx-group-1 fg-main)
+    (fg-search-rx-group-2 fg-main)
+    (fg-search-rx-group-3 fg-main)
+
+    (fg-prose-code cyan-cooler)
+    (fg-prose-macro green-warmer)
+    (fg-prose-verbatim magenta-warmer)
 
     (fg-heading-0 rainbow-0)
     (fg-heading-1 rainbow-1)
@@ -145,27 +155,7 @@ if you prefer to blend Standard and Modus into a single group, enable
     (fg-heading-5 rainbow-5)
     (fg-heading-6 rainbow-6)
     (fg-heading-7 rainbow-7)
-    (fg-heading-8 rainbow-8)
-
-    (bg-heading-0 unspecified)
-    (bg-heading-1 unspecified)
-    (bg-heading-2 unspecified)
-    (bg-heading-3 unspecified)
-    (bg-heading-4 unspecified)
-    (bg-heading-5 unspecified)
-    (bg-heading-6 unspecified)
-    (bg-heading-7 unspecified)
-    (bg-heading-8 unspecified)
-
-    (overline-heading-0 unspecified)
-    (overline-heading-1 unspecified)
-    (overline-heading-2 unspecified)
-    (overline-heading-3 unspecified)
-    (overline-heading-4 unspecified)
-    (overline-heading-5 unspecified)
-    (overline-heading-6 unspecified)
-    (overline-heading-7 unspecified)
-    (overline-heading-8 unspecified))
+    (fg-heading-8 rainbow-8))
   "Common palette mappings for the Standard themes.")
 
 (defconst standard-themes-custom-faces
@@ -179,7 +169,7 @@ if you prefer to blend Standard and Modus into a single group, enable
                 :background ,bg-mode-line-active
                 :foreground ,fg-mode-line-active)
        (((supports :box t))
-        :box (:style released-button :color ,border-mode-line-active))
+        ,@(modus-themes--box border-mode-line-active nil 'released-button))
        (t :underline ,border-mode-line-active)))))
 
 (defconst standard-themes-with-properties
