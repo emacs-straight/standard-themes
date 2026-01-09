@@ -1,7 +1,7 @@
-This is doc6I5KJq.info, produced by makeinfo version 7.1.1 from
+This is docR481cj.info, produced by makeinfo version 7.1.1 from
 standard-themes.texi.
 
-Copyright (C) 2022-2025 Free Software Foundation, Inc.
+Copyright (C) 2022-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -20,12 +20,12 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: doc6I5KJq.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
+File: docR481cj.info,  Node: Top,  Next: About the Standard themes,  Up: (dir)
 
 standard-themes: Like the default theme but more consistent
 ***********************************************************
 
-Copyright (C) 2022-2025 Free Software Foundation, Inc.
+Copyright (C) 2022-2026 Free Software Foundation, Inc.
 
      Permission is granted to copy, distribute and/or modify this
      document under the terms of the GNU Free Documentation License,
@@ -97,7 +97,7 @@ Indices
 
 
 
-File: doc6I5KJq.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
+File: docR481cj.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
 
 1 About the Standard themes
 ***************************
@@ -120,7 +120,7 @@ arrangement (or enable ‘modus-themes-include-derivatives-mode’ instead
 to blend Standard and Modus into one collection).
 
 
-File: doc6I5KJq.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
+File: docR481cj.info,  Node: Installation,  Next: Sample configuration,  Prev: About the Standard themes,  Up: Top
 
 2 Installation
 **************
@@ -131,7 +131,7 @@ File: doc6I5KJq.info,  Node: Installation,  Next: Sample configuration,  Prev: A
 * Manual installation::
 
 
-File: doc6I5KJq.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
+File: docR481cj.info,  Node: GNU ELPA package,  Next: Manual installation,  Up: Installation
 
 2.1 GNU ELPA package
 ====================
@@ -150,7 +150,7 @@ archive.  Read:
 <https://protesilaos.com/codelog/2022-05-13-emacs-elpa-devel/>.
 
 
-File: doc6I5KJq.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
+File: docR481cj.info,  Node: Manual installation,  Prev: GNU ELPA package,  Up: Installation
 
 2.2 Manual installation
 =======================
@@ -177,7 +177,7 @@ following commands in a shell prompt:
    Everything is in place to set up the package.
 
 
-File: doc6I5KJq.info,  Node: Sample configuration,  Next: Working with other Modus themes or taking over Modus,  Prev: Installation,  Up: Top
+File: docR481cj.info,  Node: Sample configuration,  Next: Working with other Modus themes or taking over Modus,  Prev: Installation,  Up: Top
 
 3 Sample configuration
 **********************
@@ -216,7 +216,7 @@ Modus::).
        (modus-themes-load-theme 'standard-light-tinted))
 
 
-File: doc6I5KJq.info,  Node: Working with other Modus themes or taking over Modus,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
+File: docR481cj.info,  Node: Working with other Modus themes or taking over Modus,  Next: Acknowledgements,  Prev: Sample configuration,  Up: Top
 
 4 Working with other Modus themes or taking over Modus
 ******************************************************
@@ -235,7 +235,7 @@ options and commands.
 * Customisation options for compatibility with Modus::
 
 
-File: doc6I5KJq.info,  Node: Loading only Standard themes with the convenience wrappers we provide,  Next: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
+File: docR481cj.info,  Node: Loading only Standard themes with the convenience wrappers we provide,  Next: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
 
 4.1 Loading only Standard themes with the convenience wrappers we provide
 =========================================================================
@@ -270,7 +270,7 @@ completely, instead of relying on these convenience wrapper commands
 (*note Taking over the Modus commands altogether::).
 
 
-File: doc6I5KJq.info,  Node: Combining core Modus themes with all their derivatives,  Next: Taking over the Modus commands altogether,  Prev: Loading only Standard themes with the convenience wrappers we provide,  Up: Working with other Modus themes or taking over Modus
+File: docR481cj.info,  Node: Combining core Modus themes with all their derivatives,  Next: Taking over the Modus commands altogether,  Prev: Loading only Standard themes with the convenience wrappers we provide,  Up: Working with other Modus themes or taking over Modus
 
 4.2 Combining core Modus themes with all their derivatives
 ==========================================================
@@ -308,7 +308,7 @@ access them all with the following commands:
 read the documentation string of each command.
 
 
-File: doc6I5KJq.info,  Node: Taking over the Modus commands altogether,  Next: Customisation options for compatibility with Modus,  Prev: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
+File: docR481cj.info,  Node: Taking over the Modus commands altogether,  Next: Customisation options for compatibility with Modus,  Prev: Combining core Modus themes with all their derivatives,  Up: Working with other Modus themes or taking over Modus
 
 4.3 Taking over the Modus commands altogether
 =============================================
@@ -334,7 +334,7 @@ theme or Modus plus derivatives if
 ‘modus-themes-include-derivatives-mode’ is enabled).
 
 
-File: doc6I5KJq.info,  Node: Customisation options for compatibility with Modus,  Prev: Taking over the Modus commands altogether,  Up: Working with other Modus themes or taking over Modus
+File: docR481cj.info,  Node: Customisation options for compatibility with Modus,  Prev: Taking over the Modus commands altogether,  Up: Working with other Modus themes or taking over Modus
 
 4.4 Customisation options for compatibility with Modus
 ======================================================
@@ -361,7 +361,7 @@ standard-themes-prompts                    modus-themes-prompts
 standard-themes-common-palette-overrides   modus-themes-common-palette-overrides
 
 
-File: doc6I5KJq.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Working with other Modus themes or taking over Modus,  Up: Top
+File: docR481cj.info,  Node: Acknowledgements,  Next: GNU Free Documentation License,  Prev: Working with other Modus themes or taking over Modus,  Up: Top
 
 5 Acknowledgements
 ******************
@@ -373,14 +373,14 @@ Author/maintainer
      Protesilaos Stavrou.
 
 Contributions to code
-     Clemens Radermacher, Trevor Arjeski.
+     Clemens Radermacher, Elías Gabriel Pérez, Trevor Arjeski.
 
 Ideas and/or user feedback
      EyoelYT, Filippo Argiolas, Fritz Grabo, Manuel Uberti, Tassilo
      Horn, Vincenzo (vpxyz), Zack Weinberg.
 
 
-File: doc6I5KJq.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
+File: docR481cj.info,  Node: GNU Free Documentation License,  Next: Indices,  Prev: Acknowledgements,  Up: Top
 
 6 GNU Free Documentation License
 ********************************
@@ -862,7 +862,7 @@ software license, such as the GNU General Public License, to permit
 their use in free software.
 
 
-File: doc6I5KJq.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
+File: docR481cj.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up: Top
 
 7 Indices
 *********
@@ -874,7 +874,7 @@ File: doc6I5KJq.info,  Node: Indices,  Prev: GNU Free Documentation License,  Up
 * Concept index::
 
 
-File: doc6I5KJq.info,  Node: Function index,  Next: Variable index,  Up: Indices
+File: docR481cj.info,  Node: Function index,  Next: Variable index,  Up: Indices
 
 7.1 Function index
 ==================
@@ -922,13 +922,13 @@ File: doc6I5KJq.info,  Node: Function index,  Next: Variable index,  Up: Indices
                                                                (line 15)
 
 
-File: doc6I5KJq.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
+File: docR481cj.info,  Node: Variable index,  Next: Concept index,  Prev: Function index,  Up: Indices
 
 7.2 Variable index
 ==================
 
 
-File: doc6I5KJq.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
+File: docR481cj.info,  Node: Concept index,  Prev: Variable index,  Up: Indices
 
 7.3 Concept index
 =================
@@ -954,11 +954,11 @@ Node: Combining core Modus themes with all their derivatives10287
 Node: Taking over the Modus commands altogether11850
 Node: Customisation options for compatibility with Modus13383
 Node: Acknowledgements14999
-Node: GNU Free Documentation License15525
-Node: Indices40667
-Node: Function index40843
-Node: Variable index44331
-Node: Concept index44476
+Node: GNU Free Documentation License15548
+Node: Indices40690
+Node: Function index40866
+Node: Variable index44354
+Node: Concept index44499
 
 End Tag Table
 

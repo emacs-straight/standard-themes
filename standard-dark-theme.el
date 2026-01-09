@@ -1,6 +1,6 @@
 ;;; standard-dark-theme.el --- Like the unthemed dark Emacs, but more consistent -*- lexical-binding:t -*-
 
-;; Copyright (C) 2022-2025  Free Software Foundation, Inc.
+;; Copyright (C) 2022-2026  Free Software Foundation, Inc.
 
 ;; Author: Protesilaos Stavrou <info@protesilaos.com>
 ;; Maintainer: Protesilaos Stavrou <info@protesilaos.com>
@@ -29,7 +29,7 @@
 ;; out-of-the-box looks of Emacs (which technically do NOT constitute
 ;; a theme) while bringing to them thematic consistency,
 ;; customizability, and extensibility.  Other themes are stylistic
-;; variations of those.
+;; variations of those or other built-in themes.
 ;;
 ;; Why call them "standard"?  Obviously because: Standard Themes Are
 ;; Not Derivatives but the Affectionately Reimagined Default ... themes.
