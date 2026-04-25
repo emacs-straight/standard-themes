@@ -38,9 +38,9 @@ Copyright (C) 2022-2026 Free Software Foundation, Inc.
      (a) The FSF’s Back-Cover Text is: “You have the freedom to copy and
      modify this GNU manual.”
 
-   This manual, written by Protesilaos Stavrou, describes the Emacs
-package called ‘standard-themes’, and provides every other piece of
-information pertinent to it.
+   This manual, written by Protesilaos, describes the Emacs package
+called ‘standard-themes’, and provides every other piece of information
+pertinent to it.
 
    The documentation furnished herein corresponds to stable version
 3.0.0, released on 2025-11-09.  Any reference to a newer feature which
@@ -369,7 +369,7 @@ This project is meant to be a collective effort.  Every bit of help
 matters.
 
 Author/maintainer
-     Protesilaos Stavrou.
+     Protesilaos.
 
 Contributions to code
      Clemens Radermacher, Elías Gabriel Pérez, Trevor Arjeski.
@@ -941,22 +941,22 @@ File: standard-themes.info,  Node: Concept index,  Prev: Variable index,  Up: In
 
 Tag Table:
 Node: Top879
-Node: About the Standard themes3529
-Node: Installation4663
-Node: GNU ELPA package4873
-Node: Manual installation5449
-Node: Sample configuration6260
-Node: Working with other Modus themes or taking over Modus8038
-Node: Loading only Standard themes with the convenience wrappers we provide8849
-Node: Combining core Modus themes with all their derivatives10338
-Node: Taking over the Modus commands altogether11907
-Node: Customisation options for compatibility with Modus13446
-Node: Acknowledgements15068
-Node: GNU Free Documentation License15623
-Node: Indices40771
-Node: Function index40953
-Node: Variable index44447
-Node: Concept index44598
+Node: About the Standard themes3521
+Node: Installation4655
+Node: GNU ELPA package4865
+Node: Manual installation5441
+Node: Sample configuration6252
+Node: Working with other Modus themes or taking over Modus8030
+Node: Loading only Standard themes with the convenience wrappers we provide8841
+Node: Combining core Modus themes with all their derivatives10330
+Node: Taking over the Modus commands altogether11899
+Node: Customisation options for compatibility with Modus13438
+Node: Acknowledgements15060
+Node: GNU Free Documentation License15607
+Node: Indices40755
+Node: Function index40937
+Node: Variable index44431
+Node: Concept index44582
 
 End Tag Table
 

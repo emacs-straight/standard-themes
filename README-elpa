@@ -2,13 +2,13 @@
             STANDARD-THEMES: LIKE THE DEFAULT THEME BUT MORE
                                CONSISTENT
 
-                          Protesilaos Stavrou
+                              Protesilaos
                           info@protesilaos.com
            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-This manual, written by Protesilaos Stavrou, describes the Emacs package
-called `standard-themes', and provides every other piece of information
+This manual, written by Protesilaos, describes the Emacs package called
+`standard-themes', and provides every other piece of information
 pertinent to it.
 
 The documentation furnished herein corresponds to stable version 3.0.0,
@@ -342,7 +342,7 @@ See section 5.1
   matters.
 
   Author/maintainer
-        Protesilaos Stavrou.
+        Protesilaos.
 
   Contributions to code
         Clemens Radermacher, Elías Gabriel Pérez, Trevor Arjeski.
