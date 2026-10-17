@@ -1,4 +1,4 @@
-This is standard-themes.info, produced by makeinfo version 7.2 from
+This is standard-themes.info, produced by makeinfo version 7.1.1 from
 standard-themes.texi.
 
 Copyright (C) 2022-2026 Free Software Foundation, Inc.
@@ -94,6 +94,7 @@ Indices
 * Function index::
 * Variable index::
 * Concept index::
+
 
 
 File: standard-themes.info,  Node: About the Standard themes,  Next: Installation,  Prev: Top,  Up: Top
@@ -938,30 +939,30 @@ File: standard-themes.info,  Node: Concept index,  Prev: Variable index,  Up: In
 * Contributors:                          Acknowledgements.      (line 6)
 * Installation instructions:             Installation.          (line 6)
 
+
 
 Tag Table:
-Node: Top879
-Node: About the Standard themes3521
-Node: Installation4655
-Node: GNU ELPA package4865
-Node: Manual installation5441
-Node: Sample configuration6252
-Node: Working with other Modus themes or taking over Modus8030
-Node: Loading only Standard themes with the convenience wrappers we provide8841
-Node: Combining core Modus themes with all their derivatives10330
-Node: Taking over the Modus commands altogether11899
-Node: Customisation options for compatibility with Modus13438
-Node: Acknowledgements15060
-Node: GNU Free Documentation License15607
-Node: Indices40755
-Node: Function index40937
-Node: Variable index44431
-Node: Concept index44582
+Node: Top881
+Node: About the Standard themes3524
+Node: Installation4658
+Node: GNU ELPA package4868
+Node: Manual installation5444
+Node: Sample configuration6255
+Node: Working with other Modus themes or taking over Modus8033
+Node: Loading only Standard themes with the convenience wrappers we provide8844
+Node: Combining core Modus themes with all their derivatives10333
+Node: Taking over the Modus commands altogether11902
+Node: Customisation options for compatibility with Modus13441
+Node: Acknowledgements15063
+Node: GNU Free Documentation License15610
+Node: Indices40758
+Node: Function index40940
+Node: Variable index44434
+Node: Concept index44585
 
 End Tag Table
 
 
 Local Variables:
 coding: utf-8
-Info-documentlanguage: en
 End:
